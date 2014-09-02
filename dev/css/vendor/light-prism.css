@@ -1,0 +1,84 @@
+/* Tema : LightSyntax */
+pre {
+margin:15px 15px 15px 0;
+padding:10px;clear:both;
+background:#f2f2f2;
+color:#666;
+border:1px solid #ddd;
+overflow:auto;
+font-family: "Consolas", "Bitstream Vera Sans Mono", "Courier New", Courier, monospace !important;
+font-weight: normal !important;
+font-style: normal !important;
+font-size: 12px !important;
+}
+code {
+color:#126AAF;
+font-family: "Consolas", "Bitstream Vera Sans Mono", "Courier New", Courier, monospace !important;
+font-weight: normal !important;
+font-style: normal !important;
+font-size: 13px !important;
+}
+code .token.punctuation {
+  color:#83405A;
+}
+pre code .token.punctuation {
+  color:#800000;
+}
+code .token.comment,
+code .token.prolog,
+code .token.doctype,
+code .token.cdata {
+  color:#008200;
+}
+code .namespace {
+  opacity:.8;
+}
+code .token.property,
+code .token.tag,
+code .token.boolean,
+code .token.number {
+  color:#881280;
+}
+code .token.selector,
+code .token.attr-name,
+code .token.string {
+  color:#986A7C;
+}
+pre code .token.selector,
+pre code .token.attr-name,
+pre code .token.string {
+  color:#994500;
+}
+code .token.entity,
+code .token.url,
+pre .language-css .token.string,
+pre .style .token.string {
+  color:#994500;
+}
+code .token.operator {
+  color:#878A85;
+}
+code .token.atrule,
+code .token.attr-value {
+  color:#48D30F;
+}
+pre code .token.atrule,
+pre code .token.attr-value {
+  color:#227BC0;
+}
+code .token.keyword {
+  color:#881280;
+  font-style:italic;
+}
+code .token.comment {
+  font-style:italic;
+}
+code .token.regex {
+  color:#B43D3D;
+}
+code .token.important {
+  font-weight:bold;
+}
+code .token.entity {
+  cursor:help;
+}
