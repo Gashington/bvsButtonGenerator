@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="shortcut icon" href="favicon.ico">
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+        <link rel="stylesheet" href="css/vendor/normalize.css">
+        <link rel="stylesheet" href="css/vendor/bootstrap.css">
+        <link rel="stylesheet" href="css/vendor/jquery.minicolors.css">
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/widgets.css">
+        <link href='http://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
+        <script src="/js/vendor/modernizr-2.8.3.min.js"></script>
+    </head>
+    <body>
+        <!--[if lt IE 8]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <div class="container">
+            <ul class="nav nav-tabs responsive" id="myTab">
+                <li class="active nav-tabs__item nav-tabs__item--item0"><a href="#home">Font</a></li>
+                <li class="nav-tabs__item nav-tabs__item--item1"><a href="#profile">Border</a></li>
+                <li class="nav-tabs__item nav-tabs__item--item2"><a href="#messages">Box</a></li>
+                <li class="nav-tabs__item nav-tabs__item--item3"><a href="#hover">:Hover</a></li>
+            </ul>
+
+            <div class="tab-content responsive">
+
+                <div class="tab-pane active" id="home">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-item form-item0">
+                                    <label for="class">Button .class</label>
+                                    <input id="class">
+                                </div>
+                                <div class="form-item form-item1">
+                                    <label for="text">Button text</label>
+                                    <input type="text" id="text">
+                                </div>
+                                <div class="form-item form-item2">
+                                    <label for="font-family">Font-family</label>
+                                    <select name="" id="font-family">
+                                        <option value="Arial">Arial</option>
+                                        <option value="Arial Black">Arial Black</option>
+                                        <option value="Comic Sans MS">Comic Sans MS</option>
+                                        <option value="Impact">Impact</option>
+                                        <option value="Lucida Sans Unicode">Lucida Sans Unicode</option>
+                                        <option value="Tahoma">Tahoma</option>
+                                        <option value="Trebuchet MS">Trebuchet MS</option>
+                                        <option value="Verdana">Verdana</option>
+                                        <option value="Georgia">Georgia</option>
+                                        <option value="Palatino Linotype">Palatino Linotype</option>
+                                        <option value="Times New Roman">Times New Roman</option>
+                                        <option value="Courier New">Courier New</option>
+                                        <option value="Lucida Console">Lucida Console</option>
+                                    </select>
+                                </div>
+                                <div class="form-item form-item3">
+                                    <label for="font-color">Font color</label>
+                                    <input type="text" id="font-color" class="minicolors">
+                                </div>
+                            </div>
+                            <div class="col-md-6">.col-md-6</div>
+
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">.col-md-12
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+                <div class="tab-pane" id="profile">...content2...</div>
+                <div class="tab-pane" id="messages">...content3...</div>
+                <div class="tab-pane" id="hover">...content4...</div>
+            </div>
+
+
+        </div>
+        
+        <script src="/js/vendor/jquery-1.11.1.js"></script>
+        <script src="/js/vendor/TweenMax.js"></script>
+        <script src="/js/vendor/bootstrap.js"></script>
+        <script src="/js/vendor/responsive-tabs.js"></script>
+        <script src="/js/vendor/jquery.minicolors.js"></script>
+        <script src="/js/plugins.js"></script>
+        <script src="/js/main.js"></script>
+
+        <!--Удалить в production версии-->
+        <script src="//localhost:35729/livereload.js"></script>
+
+    </body>
+</html>

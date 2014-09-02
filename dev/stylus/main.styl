@@ -1,0 +1,97 @@
+@import '/mixin/sprite'
+
+*
+  margin 0
+  padding 0
+  box-sizing border-box
+
+p
+  margin 0
+
+ul
+  list-style none
+
+body
+  padding 50px 0
+  background url("../img/pattern.png")
+  color #b9bdc4
+  font normal 100% 'Oswald'
+
+.nav-tabs
+  margin 0 0 -8px 0
+  .nav-tabs__item
+    width 25%
+    height 50px
+    a
+      height 100%
+      margin 0
+      padding 0
+      color #fff
+      font bold 24px 'Oswald'
+      text-align center
+      text-transform uppercase
+      &:hover
+        border none
+        background none
+        color #ffffff
+    &.active
+    &:hover
+      z-index 3
+      background-position 0 -50px
+      a
+        border none
+        background none
+        border-radius 0
+        color #ffffff
+        &:hover
+          background none
+          border none
+          color #ffffff
+  .nav-tabs__item--item0
+    background url("../img/tab-bg1.png") repeat-x
+  .nav-tabs__item--item1
+    background url("../img/tab-bg2.png") repeat-x
+  .nav-tabs__item--item2
+    background url("../img/tab-bg3.png") repeat-x
+  .nav-tabs__item--item3
+    background url("../img/tab-bg4.png") repeat-x
+.panel-group
+  .nav-tabs__item--item0
+    .panel-heading
+      background url("../img/tab-bg1.png") repeat-x
+  .nav-tabs__item--item1
+    .panel-heading
+      background url("../img/tab-bg2.png") repeat-x
+  .nav-tabs__item--item2
+    .panel-heading
+      background url("../img/tab-bg3.png") repeat-x
+  .nav-tabs__item--item3
+    .panel-heading
+      background url("../img/tab-bg4.png") repeat-x
+.tab-content
+  position relative
+  z-index 2
+  min-height 400px
+  padding 30px 0
+  border-top 3px solid #e8e8ea
+  border-right 1px solid #e8e8ea
+  border-bottom  1px solid #e8e8ea
+  border-left 1px solid #e8e8ea
+  background #ffffff
+
+.form-item
+  margin 0 0 10px 0
+  text-align center
+  label
+    width 140px
+    font-size 20px
+    text-align left
+  input
+  select
+    width 150px
+    height 30px
+    border 2px solid #659c82
+    color #010101
+    font-size 14px
+  input
+    padding 0 5px
