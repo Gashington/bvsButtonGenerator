@@ -44,18 +44,18 @@
         <div class="tab-pane tab-pane--green active" id="home">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-6">
-                        <div class="form-item form-item0">
+                    <div class="col-md-4">
+                        <div class="form-item">
                             <label for="btn-class">Button .class</label>
-                            <input id="btn-class" class="input-text input-text--green">
+                            <input id="btn-class" data-attr="btn-class" class="input-text input-text--green">
                         </div>
-                        <div class="form-item form-item1">
+                        <div class="form-item">
                             <label for="text">Button text</label>
-                            <input type="text" id="text" class="input-text input-text--green">
+                            <input type="text" data-attr="btn-text" id="text" class="input-text input-text--green">
                         </div>
-                        <div class="form-item form-item2">
+                        <div class="form-item">
                             <label for="font-family">Font-family</label>
-                            <select name="" id="font-family" class="input-select input-select--green">
+                            <select name="" id="font-family" data-attr="font-family" class="input-text input-text--green">
                                 <option value="Arial">Arial</option>
                                 <option value="Arial Black">Arial Black</option>
                                 <option value="Comic Sans MS">Comic Sans MS</option>
@@ -71,43 +71,76 @@
                                 <option value="Lucida Console">Lucida Console</option>
                             </select>
                         </div>
-                        <div class="form-item form-item3">
+                        <div class="form-item">
                             <label for="font-color">Font color</label>
-                            <input type="text" id="font-color" class="minicolors input-text input-text--green"
+                            <input type="text" data-attr="color" id="font-color" class="minicolors input-text input-text--green"
                                    placeholder="&larr; choose color">
                         </div>
-                        <div class="form-item form-item4">
+                        <div class="form-item">
                             <label for="font-size">Font-size</label>
 
-                            <div id="font-size" class="slider green"></div>
+                            <div id="font-size" data-attr="font-size" class="slider green"></div>
                         </div>
                     </div>
-                    <div class="col-md-6">
-                        <div class="form-item form-item5">
-                            <label class="ask-label ask-label--text-shadow" for="text-shadow-ask">Do you want text-shadow?</label>
-                            <input type="checkbox" id="text-shadow-ask" class="input-checkbox input-checkbox--green"
+                    <div class="col-md-4">
+                        <div class="form-item">
+                            <label for="text-transform">Text Transform</label>
+                            <select name="" id="text-transform" data-attr="text-transform" class="input-text input-text--green">
+                                <option value="none">none</option>
+                                <option value="capitalize">capitalize</option>
+                                <option value="lowercase">lowercase</option>
+                                <option value="uppercase">uppercase</option>
+
+                            </select>
+                        </div>
+                        <div class="form-item">
+                            <label for="font-style">Font Style</label>
+                            <select name="" id="font-style" data-attr="font-style" class="input-text input-text--green">
+                                <option value="normal">normal</option>
+                                <option value="italic">italic</option>
+                                <option value="oblique">oblique</option>
+                            </select>
+                        </div>
+                        <div class="form-item">
+                            <label for="font-weight">Font Weight</label>
+                            <select name="" id="font-weight" data-attr="font-weight" class="input-text input-text--green">
+                                <option value="normal">normal</option>
+                                <option value="bold">bold</option>
+                                <option value="bolder">bolder</option>
+                                <option value="lighter">lighter</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+
+                        <div class="form-item">
+                            <label class="ask-label ask-label--text-shadow" for="textShadow-adv">Do you want text-shadow?</label>
+                            <input type="checkbox" id="textShadow-adv" class="input-checkbox input-checkbox--green"
                                    placeholder="&larr; choose color">
                         </div>
-                        <div class="form-item form-item6">
-                            <label for="font-shadow-color">Shadow Color</label>
-                            <input disabled type="text" id="font-shadow-color" class="minicolors input-text input-text--green"
-                                   placeholder="&larr; choose color">
-                        </div>
-                        <div class="form-item form-item7">
-                            <label for="">Shadow Offset X</label>
+                        <div class="textShadow-adv__block">
+                            <div class="form-item">
+                                <label for="font-shadow-color">Shadow Color</label>
+                                <input disabled type="text" id="font-shadow-color" class="minicolors input-text input-text--green"
+                                       placeholder="&larr; choose color">
+                            </div>
+                            <div class="form-item">
+                                <label for="shadowTextOffset-x">Shadow Offset X</label>
 
-                            <div class="slider green"></div>
-                        </div>
-                        <div class="form-item form-item8">
-                            <label for="">Shadow Offset Y</label>
+                                <div id="shadowTextOffset-x" class="slider green"></div>
+                            </div>
+                            <div class="form-item">
+                                <label for="shadowTextOffset-y">Shadow Offset Y</label>
 
-                            <div class="slider green"></div>
-                        </div>
-                        <div class="form-item form-item9">
-                            <label for="">Font-size</label>
+                                <div id="shadowTextOffset-y" class="slider green"></div>
+                            </div>
+                            <div class="form-item">
+                                <label for="shadowText-blur">Font-size</label>
 
-                            <div class="slider green"></div>
+                                <div id="shadowText-blur" class="slider green"></div>
+                            </div>
                         </div>
+
                     </div>
 
 
