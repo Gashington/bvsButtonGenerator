@@ -31,10 +31,10 @@
     your browser</a> to improve your experience.</p>
 <![endif]-->
 
-<div class="container">
+<div class="container-fluid">
     <ul class="nav nav-tabs responsive" id="myTab">
         <li class="active nav-tabs__item nav-tabs__item--item0"><a href="#home">Font</a></li>
-        <li class="nav-tabs__item nav-tabs__item--item1"><a href="#profile">Border</a></li>
+        <li class="nav-tabs__item nav-tabs__item--item1"><a href="#profile">Border/Background</a></li>
         <li class="nav-tabs__item nav-tabs__item--item2"><a href="#messages">Box</a></li>
         <li class="nav-tabs__item nav-tabs__item--item3"><a href="#hover">:Hover</a></li>
     </ul>
@@ -42,7 +42,7 @@
     <div class="tab-content  responsive">
 
         <div class="tab-pane tab-pane--green active" id="home">
-            <div class="container">
+            <div class="container-fluid">
                 <div class="row">
                     <div class="col-md-4">
                         <div class="form-item">
@@ -79,7 +79,7 @@
                         <div class="form-item">
                             <label for="font-size">Font-size</label>
 
-                            <div id="font-size" data-attr="font-size" class="slider green"></div>
+                            <div id="font-size" data-attr="font-size" class="slider slider--green"></div>
                         </div>
                     </div>
                     <div class="col-md-4">
@@ -115,29 +115,28 @@
 
                         <div class="form-item">
                             <label class="ask-label ask-label--text-shadow" for="textShadow-adv">Do you want text-shadow?</label>
-                            <input type="checkbox" id="textShadow-adv" class="input-checkbox input-checkbox--green"
-                                   placeholder="&larr; choose color">
+                            <input type="checkbox" id="textShadow-adv" class="input-checkbox input-checkbox--green">
                         </div>
                         <div class="textShadow-adv__block">
                             <div class="form-item">
-                                <label for="font-shadow-color">Shadow Color</label>
-                                <input disabled type="text" id="font-shadow-color" class="minicolors input-text input-text--green"
+                                <label for="shadowText-color">Shadow Color</label>
+                                <input disabled type="text" id="shadowText-color" class="minicolors input-text--adv input-text--green"
                                        placeholder="&larr; choose color">
                             </div>
                             <div class="form-item">
                                 <label for="shadowTextOffset-x">Shadow Offset X</label>
 
-                                <div id="shadowTextOffset-x" class="slider green"></div>
+                                <div id="shadowTextOffset-x" class="slider--adv slider--green"></div>
                             </div>
                             <div class="form-item">
                                 <label for="shadowTextOffset-y">Shadow Offset Y</label>
 
-                                <div id="shadowTextOffset-y" class="slider green"></div>
+                                <div id="shadowTextOffset-y" class="slider--adv slider--green"></div>
                             </div>
                             <div class="form-item">
-                                <label for="shadowText-blur">Font-size</label>
+                                <label for="shadowText-blur">Shadow Blur</label>
 
-                                <div id="shadowText-blur" class="slider green"></div>
+                                <div id="shadowText-blur" class="slider--adv slider--green"></div>
                             </div>
                         </div>
 
@@ -155,9 +154,78 @@
 
                 </div>
             </div>
-
         </div>
-        <div class="tab-pane tab-pane--blue" id="profile">...content2...</div>
+        <div class="tab-pane tab-pane--blue" id="profile">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="form-item">
+                            <label for="background-color">Background-color</label>
+                            <input type="text" data-attr="background-color" id="background-color" class="minicolors input-text input-text--blue"
+                                   placeholder="&larr; choose color">
+                        </div>
+                        <div class="form-item">
+                            <label class="ask-label ask-label--text-shadow" for="background-adv">Do you want gradient?</label>
+                            <input type="checkbox" id="background-adv" class="input-checkbox input-checkbox--blue">
+                        </div>
+                        <div class="background-adv__block">
+                            <div class="form-item">
+                                <label for="backgroundColor-start">Shadow Color</label>
+                                <input disabled type="text" id="backgroundColor-start" class="minicolors input-text--adv input-text--blue"
+                                       placeholder="&larr; choose color">
+                            </div>
+                            <div class="form-item">
+                                <label for="backgroundColor-end">Shadow Offset X</label>
+
+                                <div id="backgroundColor-end" class="slider--adv slider--blue"></div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-item">
+                            <label class="ask-label ask-label--text-shadow" for="border-adv">Do you want border?</label>
+                            <input type="checkbox" id="border-adv" class="input-checkbox input-checkbox--blue">
+                        </div>
+                        <div class="border-adv__block">
+                            <div class="form-item">
+                                <label for="border-color">Border-color</label>
+                                <input disabled type="text" id="border-color" class="minicolors input-text--adv input-text--blue"
+                                       placeholder="&larr; choose color">
+                            </div>
+                            <div class="form-item">
+                                <label for="border-style">Border-style</label>
+
+                                <select name="" id="border-style" data-attr="border-style" class="input-text input-text--blue">
+                                    <option value="solid">solid</option>
+                                    <option value="dotted">dotted</option>
+                                    <option value="dashed">dashed</option>
+                                    <option value="double">double</option>
+                                    <option value="groove">groove</option>
+                                    <option value="ridge">ridge</option>
+                                    <option value="inset">inset</option>
+                                    <option value="outset">outset</option>
+                                </select>
+                            </div>
+                            <div class="form-item">
+                                <label for="border-weight">Border-weight</label>
+
+                                <div id="border-weight" class="slider--adv slider--blue"></div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="button-wrap">
+                        <button class="main-btn">Try me</button>
+                    </div>
+                </div>
+            </div></div>
         <div class="tab-pane tab-pane--red" id="messages">...content3...</div>
         <div class="tab-pane tab-pane--yellow" id="hover">...content4...</div>
     </div>

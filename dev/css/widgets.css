@@ -1,36 +1,53 @@
 /*Фон слайдера*/
-.slider {
+.slider,
+.slider--adv {
   position: relative;
   display: inline-block;
-  width: 150px;
+  width: 190px;
   height: 20px;
   margin: 0;
   padding: 0 10px;
   background: #b9bdc4;
 }
-.slider.green .ui-slider-handle {
-  background-position: 0 0;
+.slider.slider--green .ui-slider-handle,
+.slider--adv.slider--green .ui-slider-handle {
+  background-position: 0 -36px;
 }
-.slider.green .ui-widget-header {
-  background: #659c82;
+.slider.slider--green .ui-widget-header,
+.slider--adv.slider--green .ui-widget-header {
+  background: #5b8873;
 }
-.slider.blue .ui-slider-handle {
+.slider.slider--blue .ui-slider-handle,
+.slider--adv.slider--blue .ui-slider-handle {
   background-position: 0 -72px;
 }
-.slider.blue .ui-widget-header {
-  background: #80afd7;
+.slider.slider--blue .ui-widget-header,
+.slider--adv.slider--blue .ui-widget-header {
+  background: #5b8873;
 }
-.slider.red .ui-slider-handle {
-  background-position: 0 -48px;
+.slider.slider--red .ui-slider-handle,
+.slider--adv.slider--red .ui-slider-handle {
+  background-position: 0 -108px;
 }
-.slider.red .ui-widget-header {
-  background: #db7d7b;
+.slider.slider--red .ui-widget-header,
+.slider--adv.slider--red .ui-widget-header {
+  background: #c15d55;
 }
-.slider.yellow .ui-slider-handle {
-  background-position: 0 -24px;
+.slider.slider--yellow .ui-slider-handle,
+.slider--adv.slider--yellow .ui-slider-handle {
+  background-position: 0 -144px;
 }
-.slider.yellow .ui-widget-header {
-  background: #ecca6c;
+.slider.slider--yellow .ui-widget-header,
+.slider--adv.slider--yellow .ui-widget-header {
+  background: #dcb055;
+}
+.slider.ui-slider-disabled .ui-slider-handle,
+.slider--adv.ui-slider-disabled .ui-slider-handle {
+  background-position: 0 0px;
+}
+.slider.ui-slider-disabled .ui-widget-header,
+.slider--adv.ui-slider-disabled .ui-widget-header {
+  background: #b9bdc4;
 }
 .ui-slider-handle {
   width: 36px;
@@ -39,7 +56,7 @@
   top: -7px;
   margin-left: -12px;
   z-index: 200;
-  background: #ffa500 no-repeat;
+  background: url("../img/handle-bg.png") no-repeat;
   color: #fff;
   outline: none;
   text-align: center;

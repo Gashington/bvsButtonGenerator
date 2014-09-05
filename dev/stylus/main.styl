@@ -14,9 +14,10 @@ ul
 body
   padding 50px 0
   background url("../img/pattern.png")
-  color #b9bdc4
+  color #787078
   font normal 100% 'Oswald'
-
+.container-fluid
+  max-width 1140px
 .nav-tabs
   margin 0 0 -6px 0
   .nav-tabs__item
@@ -85,20 +86,27 @@ body
   text-align center
   label
     width 140px
-    font-size 20px
+    font-size 18px
     text-align left
   .ask-label--text-shadow
     width 220px
 .input-text
-.input-select
-  width 150px
+.input-text--adv
+  width 190px
   height 30px
   padding 0 5px
   color #010101
   font-size 14px
+.input-text[disabled]
+.input-text--adv[disabled]
+  border 1px solid #b9bdc4
+  background none
 .input-text--green
 .input-select--green
   border 2px solid #659c82
+.input-text--blue
+.input-select--blue
+  border 2px solid #6b98cd
 
 .button-wrap
   padding 30px 0
@@ -107,7 +115,6 @@ body
     padding 10px
     background: olivedrab
     border: none
-    font-size: 20px
+    font-size: 18px
     font-family: 'Verdana'
     color: white
-    transition: all 0.3s ease-out;
