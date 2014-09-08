@@ -170,16 +170,30 @@
                         </div>
                         <div class="background-adv__block">
                             <div class="form-item">
-                                <label for="backgroundColor-start">Shadow Color</label>
+                                <label for="backgroundColor-start">Color Start</label>
                                 <input disabled type="text" id="backgroundColor-start" class="minicolors input-text--adv input-text--blue"
-                                       placeholder="&larr; choose color">
+                                       placeholder="&larr; choose color" value="#fff">
                             </div>
                             <div class="form-item">
-                                <label for="backgroundColor-end">Shadow Offset X</label>
+                                <label for="backgroundColor-end">Color End</label>
 
-                                <div id="backgroundColor-end" class="slider--adv slider--blue"></div>
+                                <input disabled type="text" id="backgroundColor-end" class="minicolors input-text--adv input-text--blue"
+                                       placeholder="&larr; choose color" value="#000">
                             </div>
+                            <div class="form-item">
+                                <label for="backgroundColor-dest">Border-style</label>
 
+                                <select disabled name="" id="backgroundColor-dest" class="input-text--adv input-text--blue">
+                                    <option value="to top">to top</option>
+                                    <option value="to left">to left</option>
+                                    <option value="to bottom">to bottom</option>
+                                    <option value="to right">to right</option>
+                                    <option value="to top left">to top left</option>
+                                    <option value="to top right">to top right</option>
+                                    <option value="to bottom left">to bottom left</option>
+                                    <option value="to bottom right">to bottom right</option>
+                                </select>
+                            </div>
                         </div>
 
                     </div>
@@ -197,7 +211,7 @@
                             <div class="form-item">
                                 <label for="border-style">Border-style</label>
 
-                                <select name="" id="border-style" data-attr="border-style" class="input-text input-text--blue">
+                                <select disabled name="" id="border-style" data-attr="border-style" class="input-text input-text--blue">
                                     <option value="solid">solid</option>
                                     <option value="dotted">dotted</option>
                                     <option value="dashed">dashed</option>
@@ -217,7 +231,34 @@
                         </div>
                     </div>
                     <div class="col-md-4">
+                        <div class="form-item">
+                            <label for="border-radius">Border Radius</label>
 
+                            <div id="border-radius" data-attr="border-radius" class="slider slider--blue"></div>
+                        </div>
+                        <div class="form-item">
+                            <label class="ask-label ask-label--border-radius" for="borderRadius-adv">Do you want different radius?</label>
+                            <input type="checkbox" id="borderRadius-adv" class="input-checkbox input-checkbox--blue">
+                        </div>
+                        <div class="borderRadius-adv__block">
+                            <div class="form-item">
+                                <label for="borderRadius-tr">Border-color</label>
+                                <div id="borderRadius-tr" class="slider--adv .border-radius--adv slider--blue"></div>
+                            </div>
+                            <div class="form-item">
+                                <label for="borderRadius-tl">Border-style</label>
+                                <div id="borderRadius-tl" class="slider--adv .border-radius--adv slider--blue"></div>
+                            </div>
+                            <div class="form-item">
+                                <label for="borderRadius-br">Border-weight</label>
+                                <div id="borderRadius-br" class="slider--adv .border-radius--adv slider--blue"></div>
+                            </div>
+                            <div class="form-item">
+                                <label for="borderRadius-bl">Border-weight</label>
+                                <div id="borderRadius-bl" class="slider--adv .border-radius--adv slider--blue"></div>
+                            </div>
+
+                        </div>
                     </div>
                 </div>
                 <div class="row">
