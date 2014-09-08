@@ -7,8 +7,9 @@ $(function () {
             //настройки по умолчанию
             default: {
                 'btn-class': 'my-class',
-                'btn-text': 'Try me',
-                'color': '#ffffff',
+                'btn-text': 'Stylize me completely :(',
+                'border' : 'none',
+                'color': '#000',
                 'font-style': 'normal',
                 'font-weight': 'normal',
                 'font-size': '16',
@@ -23,18 +24,24 @@ $(function () {
             //все текстовые инпуты с которыми работаем
             $input_text: $('.input-text'),
             $shodowText_color: $('#shadowText-color'),
+            $background_color: $('#background-color'),
             // набор бегунки (jquery ui slider)
             $sliders: $('.slider'),
             $font_size: $('#font-size'),
             $shadowTextOffset_x: $('#shadowTextOffset-x'),
             $shadowTextOffset_y: $('#shadowTextOffset-y'),
             $shadowText_blur: $('#shadowText-blur'),
+            $backgroundColor_start: $('#backgroundColor-start'),
+            $backgroundColor_end: $('#backgroundColor-end'),
+            $backgroundColor_dest: $('#backgroundColor-dest'),
 
             // checkbox расширенного режима
             $textShadow_adv: $('#textShadow-adv'),
+            $background_adv: $('#background-adv'),
 
             // блоки расширенных настроек
             $textShadow_adv__block: $('.textShadow-adv__block'),
+            $background_adv__block: $('.background-adv__block')
         },
 
 
@@ -83,18 +90,24 @@ $(function () {
             app.var.$btn.css(app.var.default)
             app.listeners();
         },
+
         listeners: function () {
             app.var.$input_text.on('keyup change', this.set_input_text_data);
             app.var.$sliders.on('slide', this.set_slider_text_data);
             app.var.$sliders.on('slide slidestop', this.sliderHandle_update);
-            app.var.$textShadow_adv.on('change', this.set_textShadow_adv);
+            app.var.$textShadow_adv.on('change', this.switch_textShadow_adv);
+            app.var.$background_adv.on('change', this.switch_background_adv);
             app.var.$shodowText_color.on('change', this.set_textShadow);
+            $(".input-text--adv", app.var.$background_adv__block).on('change', this.set_backgroundGradient)
             $(".slider--adv", app.var.$textShadow_adv__block).on('slide', this.set_textShadow);
             $(".slider--adv", app.var.$textShadow_adv__block).on('slide slidestop', this.sliderHandle_update);
         },
-        sliderHandle_update: function(e, ui) {
+
+        sliderHandle_update: function(e, ui, postfix) {
+
             $(".ui-slider-handle", $(this)).html($(this).slider('value') + 'px');
         },
+
         set_input_text_data: function (e) {
             var attr = $(this).attr('data-attr');
             if ($(this).val() == '') {
@@ -116,8 +129,7 @@ $(function () {
             app.var.$btn.css(app.var.cur_data)
         },
 
-        set_textShadow_adv: function (e) {
-            var css = { 'text-shadow': '' }
+        switch_textShadow_adv: function (e) {
             if ($(this).prop('checked')) {
                 $("input", app.var.$textShadow_adv__block).prop('disabled', false);
                 $(".slider--adv", app.var.$textShadow_adv__block).slider('enable');
@@ -131,7 +143,22 @@ $(function () {
                 app.var.$btn.css(app.var.cur_data);
                 app.get_css();
             }
+        },
 
+        switch_background_adv: function (e) {
+            if ($(this).prop('checked')) {
+                app.var.$background_color.prop('disabled', true)
+                $(".input-text--adv", app.var.$background_adv__block).prop('disabled', false);
+                $(".slider--adv", app.var.$background_adv__block).slider('enable');
+                app.set_backgroundGradient();
+            }
+            else {
+                app.var.$background_color.prop('disabled', false).trigger('change')
+                $(".input-text--adv", app.var.$background_adv__block).prop('disabled', true);
+                $(".slider--adv", app.var.$background_adv__block).slider('disable');
+                app.var.$btn.css(app.var.cur_data);
+                app.get_css();
+            }
         },
 
         set_textShadow: function (ui) {
@@ -149,6 +176,23 @@ $(function () {
             app.get_css();
         },
 
+        set_backgroundGradient: function () {
+                data = {
+                    dest: app.var.$backgroundColor_dest.val(),
+                    colorStart: app.var.$backgroundColor_start.val(),
+                    colorEnd: app.var.$backgroundColor_end.val(),
+
+                }
+            //app.var.cur_data['background'] = 'linear-gradient('+data.dest +','+ data.colorStart+',' + data.colorEnd+')';
+            //console.log(css);
+            //console.log(app.var.cur_data)
+            //'-webkit-linear-gradient(bottom, #'+ myhex +' 0%, #FFDA2E 100%)'
+            //app.var.cur_data['background-image'] = '-webkit-linear-gradient('+data.colorStart+', '+data.colorEnd+')'
+            app.var.cur_data['background-image'] = '-webkit-linear-gradient(30deg, '+ data.colorStart +' 0%, #FFDA2E 100%)'
+            console.log(app.var.cur_data['background-image'])
+            app.var.$btn.css(app.var.cur_data);
+            app.get_css();
+        },
         get_html: function () {
             var val = app.var.cur_data['btn-text'];
             app.var.$btn.text(val);
@@ -173,7 +217,7 @@ $(function () {
                 str += "\t" + 'text-transform: ' + data['text-transform'] + ";\n";
             }
             if (data['text-shadow'] !== 'none') {
-                str += "\t" + 'text-shadow: ' + data['text-shadow'] + ";\n";
+                str += "\t" + 'text-shadow: ' + data['text-shadow'] + "; /*not support ie8-9*/\n";
             }
 
             str += '}';

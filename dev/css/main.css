@@ -133,9 +133,6 @@ body {
 }
 .button-wrap button {
   padding: 10px;
-  background: #6b8e23;
-  border: none;
-  font-size: 18px;
-  font-family: 'Verdana';
-  color: #fff;
+  color: #000;
+  font-size: 16px;
 }
