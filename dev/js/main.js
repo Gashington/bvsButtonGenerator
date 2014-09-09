@@ -8,7 +8,9 @@ $(function () {
             default: {
                 'btn-class': 'my-class',
                 'btn-text': 'Stylize me completely :(',
-                'border' : 'none',
+                'border-width': '1px',
+                'border-style': 'none',
+                'border-color': '#000',
                 'color': '#000',
                 'font-style': 'normal',
                 'font-weight': 'normal',
@@ -23,8 +25,9 @@ $(function () {
 
             //все текстовые инпуты с которыми работаем
             $input_text: $('.input-text'),
-            $shodowText_color: $('#shadowText-color'),
+            $shadowText_color: $('#shadowText-color'),
             $background_color: $('#background-color'),
+
             // набор бегунки (jquery ui slider)
             $sliders: $('.slider'),
             $font_size: $('#font-size'),
@@ -34,14 +37,31 @@ $(function () {
             $backgroundColor_start: $('#backgroundColor-start'),
             $backgroundColor_end: $('#backgroundColor-end'),
             $backgroundColor_dest: $('#backgroundColor-dest'),
+            $border_width: $('#border-width'),
+            $borderRadius: $('#border-radius'),
+            $borderRadius_tr: $('#borderRadius-tr'),
+            $borderRadius_tl: $('#borderRadius-tl'),
+            $borderRadius_bl: $('#borderRadius-bl'),
+            $borderRadius_br: $('#borderRadius-br'),
+            $padding: $('#padding'),
+            $paddingTop: $('#padding-top'),
+            $paddingRight: $('#padding-right'),
+            $paddingBottom: $('#padding-bottom'),
+            $paddingLeft: $('#padding-left'),
 
             // checkbox расширенного режима
             $textShadow_adv: $('#textShadow-adv'),
             $background_adv: $('#background-adv'),
+            $border_adv: $('#border-adv'),
+            $borderRadius_adv: $('#borderRadius-adv'),
+            $padding_adv: $('#padding-adv'),
 
             // блоки расширенных настроек
             $textShadow_adv__block: $('.textShadow-adv__block'),
-            $background_adv__block: $('.background-adv__block')
+            $background_adv__block: $('.background-adv__block'),
+            $border_adv__block: $('.border-adv__block'),
+            $borderRadius_adv__block: $('.borderRadius-adv__block'),
+            $padding_adv__block: $('.padding-adv__block')
         },
 
 
@@ -52,7 +72,6 @@ $(function () {
                 range: "min", min: 6, max: 60, step: 1,
                 value: app.var.default['font-size'],
                 create: function (event, ui) {
-                    console.log(ui.value)
                     $(".ui-slider-handle", $(this)).html($(this).slider('value') + 'px');
                 }
             });
@@ -61,7 +80,6 @@ $(function () {
                 range: "min", min: -60, max: 60, step: 1,
                 value: app.var.default['textShadow-posx'],
                 create: function (event, ui) {
-                    console.log(ui.value)
                     $(".ui-slider-handle", $(this)).html($(this).slider('value') + 'px');
                 }
             });
@@ -70,7 +88,6 @@ $(function () {
                 range: "min", min: -60, max: 60, step: 1,
                 value: app.var.default['textShadow-posy'],
                 create: function (event, ui) {
-                    console.log(ui.value)
                     $(".ui-slider-handle", $(this)).html($(this).slider('value') + 'px');
                 }
             });
@@ -79,11 +96,54 @@ $(function () {
                 range: "min", min: 0, max: 10, step: 1,
                 value: app.var.default['textShadow-blur'],
                 create: function (event, ui) {
-                    console.log(ui.value)
                     $(".ui-slider-handle", $(this)).html($(this).slider('value') + 'px');
                 }
             });
-
+            app.var.$border_width.slider({
+                disabled: false,
+                range: "min", min: 1, max: 30, step: 1,
+                //value: app.var.default['border-weight'],
+                create: function (event, ui) {
+                    //console.log(ui.value)
+                    $(".ui-slider-handle", $(this)).html($(this).slider('value') + 'px');
+                }
+            });
+            app.var.$borderRadius.slider({
+                disabled: false,
+                range: "min", min: 0, max: 60, step: 1,
+                //value: app.var.default['border-weight'],
+                create: function (event, ui) {
+                    //console.log(ui.value)
+                    $(".ui-slider-handle", $(this)).html($(this).slider('value') + 'px');
+                }
+            });
+            $('.slider--adv',app.var.$borderRadius_adv__block).slider({
+                disabled: true,
+                range: "min", min: 0, max: 60, step: 1,
+                //value: app.var.default['border-weight'],
+                create: function (event, ui) {
+                    //console.log(ui.value)
+                    $(".ui-slider-handle", $(this)).html($(this).slider('value') + 'px');
+                }
+            });
+            app.var.$padding.slider({
+                disabled: false,
+                range: "min", min: 0, max: 60, step: 1,
+                //value: app.var.default['border-weight'],
+                create: function (event, ui) {
+                    //console.log(ui.value)
+                    $(".ui-slider-handle", $(this)).html($(this).slider('value') + 'px');
+                }
+            });
+            $('.slider--adv',app.var.$padding_adv__block).slider({
+                disabled: true,
+                range: "min", min: 0, max: 60, step: 1,
+                //value: app.var.default['border-weight'],
+                create: function (event, ui) {
+                    //console.log(ui.value)
+                    $(".ui-slider-handle", $(this)).html($(this).slider('value') + 'px');
+                }
+            });
             app.var.cur_data = app.cloneObj(app.var.default);
             app.get_html();
             app.get_css();
@@ -97,10 +157,17 @@ $(function () {
             app.var.$sliders.on('slide slidestop', this.sliderHandle_update);
             app.var.$textShadow_adv.on('change', this.switch_textShadow_adv);
             app.var.$background_adv.on('change', this.switch_background_adv);
-            app.var.$shodowText_color.on('change', this.set_textShadow);
+            app.var.$borderRadius_adv.on('change', this.switch_borderRadius_adv);
+            app.var.$padding_adv.on('change', this.switch_padding_adv);
+            app.var.$shadowText_color.on('change', this.set_textShadow);
             $(".input-text--adv", app.var.$background_adv__block).on('change', this.set_backgroundGradient)
             $(".slider--adv", app.var.$textShadow_adv__block).on('slide', this.set_textShadow);
             $(".slider--adv", app.var.$textShadow_adv__block).on('slide slidestop', this.sliderHandle_update);
+            $(".slider--adv", app.var.$borderRadius_adv__block).on('slide', this.set_borderRadius);
+            $(".slider--adv", app.var.$borderRadius_adv__block).on('slide slidestop', this.sliderHandle_update);
+            $(".slider--adv", app.var.$padding_adv__block).on('slide', this.set_padding);
+            $(".slider--adv", app.var.$padding_adv__block).on('slide slidestop', this.sliderHandle_update);
+
         },
 
         sliderHandle_update: function(e, ui, postfix) {
@@ -124,47 +191,15 @@ $(function () {
         set_slider_text_data: function (e, ui) {
             var attr = $(this).attr('data-attr');
             //$(".ui-slider-handle", $(this)).html(ui.value + 'px');
+            console.log(ui.value)
             app.var.cur_data[attr] = ui.value;
             app.get_css();
             app.var.$btn.css(app.var.cur_data)
         },
 
-        switch_textShadow_adv: function (e) {
-            if ($(this).prop('checked')) {
-                $("input", app.var.$textShadow_adv__block).prop('disabled', false);
-                $(".slider--adv", app.var.$textShadow_adv__block).slider('enable');
-                app.set_textShadow();
-            }
-            else {
-                $("input", app.var.$textShadow_adv__block).prop('disabled', true);
-                $(".slider--adv", app.var.$textShadow_adv__block).slider('disable');
-                //css['text-shadow'] = 'none';
-                app.var.cur_data['text-shadow'] = 'none'
-                app.var.$btn.css(app.var.cur_data);
-                app.get_css();
-            }
-        },
-
-        switch_background_adv: function (e) {
-            if ($(this).prop('checked')) {
-                app.var.$background_color.prop('disabled', true)
-                $(".input-text--adv", app.var.$background_adv__block).prop('disabled', false);
-                $(".slider--adv", app.var.$background_adv__block).slider('enable');
-                app.set_backgroundGradient();
-            }
-            else {
-                app.var.$background_color.prop('disabled', false).trigger('change')
-                $(".input-text--adv", app.var.$background_adv__block).prop('disabled', true);
-                $(".slider--adv", app.var.$background_adv__block).slider('disable');
-                app.var.$btn.css(app.var.cur_data);
-                app.get_css();
-            }
-        },
-
         set_textShadow: function (ui) {
-            var css = { 'text-shadow': '' },
                 data = {
-                    color: app.var.$shodowText_color.val(),
+                    color: app.var.$shadowText_color.val(),
                     posx: app.var.$shadowTextOffset_x.slider('value') + 'px ',
                     posy: app.var.$shadowTextOffset_y.slider('value') + 'px ',
                     blur: app.var.$shadowText_blur.slider('value') + 'px '
@@ -183,15 +218,96 @@ $(function () {
                     colorEnd: app.var.$backgroundColor_end.val(),
 
                 }
-            //app.var.cur_data['background'] = 'linear-gradient('+data.dest +','+ data.colorStart+',' + data.colorEnd+')';
-            //console.log(css);
-            //console.log(app.var.cur_data)
-            //'-webkit-linear-gradient(bottom, #'+ myhex +' 0%, #FFDA2E 100%)'
-            //app.var.cur_data['background-image'] = '-webkit-linear-gradient('+data.colorStart+', '+data.colorEnd+')'
-            app.var.cur_data['background-image'] = '-webkit-linear-gradient(30deg, '+ data.colorStart +' 0%, #FFDA2E 100%)'
+            app.var.cur_data['background-image'] = '-webkit-linear-gradient('+ data.dest +', '+ data.colorStart +' 0%, '+ data.colorEnd +' 100%)'
             console.log(app.var.cur_data['background-image'])
             app.var.$btn.css(app.var.cur_data);
             app.get_css();
+        },
+
+        set_borderRadius: function (ui) {
+            data = {
+                topLeft: app.var.$borderRadius_tl.slider('value') + 'px ',
+                topRight: app.var.$borderRadius_tr.slider('value') + 'px ',
+                bottomLeft: app.var.$borderRadius_bl.slider('value') + 'px ',
+                bottomRight: app.var.$borderRadius_br.slider('value') + 'px '
+            }
+            app.var.cur_data['border-radius'] = data.topLeft + data.topRight + data.bottomLeft+ data.bottomRight;
+            //console.log(css);
+            //console.log(app.var.cur_data)
+            app.var.$btn.css(app.var.cur_data);
+            app.get_css();
+        },
+        set_padding: function (ui) {
+            data = {
+                topLeft: app.var.$paddingTop.slider('value') + 'px ',
+                topRight: app.var.$paddingRight.slider('value') + 'px ',
+                bottomLeft: app.var.$paddingBottom.slider('value') + 'px ',
+                bottomRight: app.var.$paddingLeft.slider('value') + 'px '
+            }
+            app.var.cur_data['padding'] = data.topLeft + data.topRight + data.bottomLeft+ data.bottomRight;
+            //console.log(css);
+            //console.log(app.var.cur_data)
+            app.var.$btn.css(app.var.cur_data);
+            app.get_css();
+        },
+        switch_textShadow_adv: function (e) {
+            if ($(this).prop('checked')) {
+                $("input", app.var.$textShadow_adv__block).prop('disabled', false);
+                $(".slider--adv", app.var.$textShadow_adv__block).slider('enable');
+                app.set_textShadow();
+            }
+            else {
+                $("input", app.var.$textShadow_adv__block).prop('disabled', true);
+                $(".slider--adv", app.var.$textShadow_adv__block).slider('disable');
+                app.var.cur_data['text-shadow'] = 'none'
+                app.var.$btn.css(app.var.cur_data);
+                app.get_css();
+            }
+        },
+
+        switch_background_adv: function (e) {
+            if ($(this).prop('checked')) {
+                app.var.$background_color.prop('disabled', true)
+                $(".input-text--adv", app.var.$background_adv__block).prop('disabled', false);
+                $(".slider--adv", app.var.$background_adv__block).slider('enable');
+                app.set_backgroundGradient();
+            }
+            else {
+                app.var.$background_color.prop('disabled', false).trigger('change')
+                $(".input-text--adv", app.var.$background_adv__block).prop('disabled', true);
+                $(".slider--adv", app.var.$background_adv__block).slider('disable');
+                app.var.cur_data['background-image'] = 'none'
+                app.var.$btn.css(app.var.cur_data);
+                app.get_css();
+            }
+        },
+        switch_borderRadius_adv: function(e) {
+            if ($(this).prop('checked')) {
+                app.var.$borderRadius.slider('disable')
+                $(".slider--adv", app.var.$borderRadius_adv__block).slider('enable');
+                app.set_borderRadius();
+            }
+            else {
+                app.var.cur_data['border-radius'] = app.var.$borderRadius.slider('enable')
+                $(".slider--adv", app.var.$borderRadius_adv__block).slider('disable');
+                app.var.cur_data['border-radius'] = app.var.$borderRadius.slider('value')+'px'
+                app.var.$btn.css(app.var.cur_data);
+                app.get_css();
+            }
+        },
+        switch_padding_adv: function(e) {
+            if ($(this).prop('checked')) {
+                app.var.$padding.slider('disable')
+                $(".slider--adv", app.var.$padding_adv__block).slider('enable');
+                app.set_padding();
+            }
+            else {
+                app.var.cur_data['padding'] = app.var.$padding.slider('enable')
+                $(".slider--adv", app.var.$padding_adv__block).slider('disable');
+                app.var.cur_data['padding'] = app.var.$padding.slider('value')+'px'
+                app.var.$btn.css(app.var.cur_data);
+                app.get_css();
+            }
         },
         get_html: function () {
             var val = app.var.cur_data['btn-text'];

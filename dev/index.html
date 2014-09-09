@@ -32,257 +32,335 @@
 <![endif]-->
 
 <div class="container-fluid">
-    <ul class="nav nav-tabs responsive" id="myTab">
-        <li class="active nav-tabs__item nav-tabs__item--item0"><a href="#home">Font</a></li>
-        <li class="nav-tabs__item nav-tabs__item--item1"><a href="#profile">Border/Background</a></li>
-        <li class="nav-tabs__item nav-tabs__item--item2"><a href="#messages">Box</a></li>
-        <li class="nav-tabs__item nav-tabs__item--item3"><a href="#hover">:Hover</a></li>
-    </ul>
+<ul class="nav nav-tabs responsive" id="myTab">
+    <li class="active nav-tabs__item nav-tabs__item--item0"><a href="#home">Font</a></li>
+    <li class="nav-tabs__item nav-tabs__item--item1"><a href="#profile">Border/Background</a></li>
+    <li class="nav-tabs__item nav-tabs__item--item2"><a href="#messages">Box</a></li>
+    <li class="nav-tabs__item nav-tabs__item--item3"><a href="#hover">:Hover</a></li>
+</ul>
 
-    <div class="tab-content  responsive">
+<div class="tab-content  responsive">
 
-        <div class="tab-pane tab-pane--green active" id="home">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-md-4">
-                        <div class="form-item">
-                            <label for="btn-class">Button .class</label>
-                            <input id="btn-class" data-attr="btn-class" class="input-text input-text--green">
-                        </div>
-                        <div class="form-item">
-                            <label for="text">Button text</label>
-                            <input type="text" data-attr="btn-text" id="text" class="input-text input-text--green">
-                        </div>
-                        <div class="form-item">
-                            <label for="font-family">Font-family</label>
-                            <select name="" id="font-family" data-attr="font-family" class="input-text input-text--green">
-                                <option value="Arial">Arial</option>
-                                <option value="Arial Black">Arial Black</option>
-                                <option value="Comic Sans MS">Comic Sans MS</option>
-                                <option value="Impact">Impact</option>
-                                <option value="Lucida Sans Unicode">Lucida Sans Unicode</option>
-                                <option value="Tahoma">Tahoma</option>
-                                <option value="Trebuchet MS">Trebuchet MS</option>
-                                <option value="Verdana">Verdana</option>
-                                <option value="Georgia">Georgia</option>
-                                <option value="Palatino Linotype">Palatino Linotype</option>
-                                <option value="Times New Roman">Times New Roman</option>
-                                <option value="Courier New">Courier New</option>
-                                <option value="Lucida Console">Lucida Console</option>
-                            </select>
-                        </div>
-                        <div class="form-item">
-                            <label for="font-color">Font color</label>
-                            <input type="text" data-attr="color" id="font-color" class="minicolors input-text input-text--green"
-                                   placeholder="&larr; choose color">
-                        </div>
-                        <div class="form-item">
-                            <label for="font-size">Font-size</label>
-
-                            <div id="font-size" data-attr="font-size" class="slider slider--green"></div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="form-item">
-                            <label for="text-transform">Text Transform</label>
-                            <select name="" id="text-transform" data-attr="text-transform" class="input-text input-text--green">
-                                <option value="none">none</option>
-                                <option value="capitalize">capitalize</option>
-                                <option value="lowercase">lowercase</option>
-                                <option value="uppercase">uppercase</option>
-
-                            </select>
-                        </div>
-                        <div class="form-item">
-                            <label for="font-style">Font Style</label>
-                            <select name="" id="font-style" data-attr="font-style" class="input-text input-text--green">
-                                <option value="normal">normal</option>
-                                <option value="italic">italic</option>
-                                <option value="oblique">oblique</option>
-                            </select>
-                        </div>
-                        <div class="form-item">
-                            <label for="font-weight">Font Weight</label>
-                            <select name="" id="font-weight" data-attr="font-weight" class="input-text input-text--green">
-                                <option value="normal">normal</option>
-                                <option value="bold">bold</option>
-                                <option value="bolder">bolder</option>
-                                <option value="lighter">lighter</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-
-                        <div class="form-item">
-                            <label class="ask-label ask-label--text-shadow" for="textShadow-adv">Do you want text-shadow?</label>
-                            <input type="checkbox" id="textShadow-adv" class="input-checkbox input-checkbox--green">
-                        </div>
-                        <div class="textShadow-adv__block">
-                            <div class="form-item">
-                                <label for="shadowText-color">Shadow Color</label>
-                                <input disabled type="text" id="shadowText-color" class="minicolors input-text--adv input-text--green"
-                                       placeholder="&larr; choose color">
-                            </div>
-                            <div class="form-item">
-                                <label for="shadowTextOffset-x">Shadow Offset X</label>
-
-                                <div id="shadowTextOffset-x" class="slider--adv slider--green"></div>
-                            </div>
-                            <div class="form-item">
-                                <label for="shadowTextOffset-y">Shadow Offset Y</label>
-
-                                <div id="shadowTextOffset-y" class="slider--adv slider--green"></div>
-                            </div>
-                            <div class="form-item">
-                                <label for="shadowText-blur">Shadow Blur</label>
-
-                                <div id="shadowText-blur" class="slider--adv slider--green"></div>
-                            </div>
-                        </div>
-
-                    </div>
-
-
+<div class="tab-pane tab-pane--green active" id="home">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="form-item">
+                    <label for="btn-class">Button .class</label>
+                    <input id="btn-class" data-attr="btn-class" class="input-text input-text--green">
                 </div>
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="button-wrap">
-                            <button class="main-btn">Try me</button>
-                        </div>
+                <div class="form-item">
+                    <label for="text">Button text</label>
+                    <input type="text" data-attr="btn-text" id="text" class="input-text input-text--green">
+                </div>
+                <div class="form-item">
+                    <label for="font-family">Font-family</label>
+                    <select name="" id="font-family" data-attr="font-family" class="input-text input-text--green">
+                        <option value="Arial">Arial</option>
+                        <option value="Arial Black">Arial Black</option>
+                        <option value="Comic Sans MS">Comic Sans MS</option>
+                        <option value="Impact">Impact</option>
+                        <option value="Lucida Sans Unicode">Lucida Sans Unicode</option>
+                        <option value="Tahoma">Tahoma</option>
+                        <option value="Trebuchet MS">Trebuchet MS</option>
+                        <option value="Verdana">Verdana</option>
+                        <option value="Georgia">Georgia</option>
+                        <option value="Palatino Linotype">Palatino Linotype</option>
+                        <option value="Times New Roman">Times New Roman</option>
+                        <option value="Courier New">Courier New</option>
+                        <option value="Lucida Console">Lucida Console</option>
+                    </select>
+                </div>
+                <div class="form-item">
+                    <label for="font-color">Font color</label>
+                    <input type="text" data-attr="color" id="font-color" class="minicolors input-text input-text--green"
+                           placeholder="&larr; choose color">
+                </div>
+                <div class="form-item">
+                    <label for="font-size">Font-size</label>
 
+                    <div id="font-size" data-attr="font-size" class="slider slider--green"></div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-item">
+                    <label for="text-transform">Text Transform</label>
+                    <select name="" id="text-transform" data-attr="text-transform" class="input-text input-text--green">
+                        <option value="none">none</option>
+                        <option value="capitalize">capitalize</option>
+                        <option value="lowercase">lowercase</option>
+                        <option value="uppercase">uppercase</option>
+
+                    </select>
+                </div>
+                <div class="form-item">
+                    <label for="font-style">Font Style</label>
+                    <select name="" id="font-style" data-attr="font-style" class="input-text input-text--green">
+                        <option value="normal">normal</option>
+                        <option value="italic">italic</option>
+                        <option value="oblique">oblique</option>
+                    </select>
+                </div>
+                <div class="form-item">
+                    <label for="font-weight">Font Weight</label>
+                    <select name="" id="font-weight" data-attr="font-weight" class="input-text input-text--green">
+                        <option value="normal">normal</option>
+                        <option value="bold">bold</option>
+                        <option value="bolder">bolder</option>
+                        <option value="lighter">lighter</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-md-4">
+
+                <div class="form-item">
+                    <label class="ask-label ask-label--text-shadow" for="textShadow-adv">Do you want
+                        text-shadow?</label>
+                    <input type="checkbox" id="textShadow-adv" class="input-checkbox input-checkbox--green">
+                </div>
+                <div class="textShadow-adv__block">
+                    <div class="form-item">
+                        <label for="shadowText-color">Shadow Color</label>
+                        <input disabled type="text" id="shadowText-color"
+                               class="minicolors input-text--adv input-text--green"
+                               placeholder="&larr; choose color">
+                    </div>
+                    <div class="form-item">
+                        <label for="shadowTextOffset-x">Shadow Offset X</label>
+
+                        <div id="shadowTextOffset-x" class="slider--adv slider--green"></div>
+                    </div>
+                    <div class="form-item">
+                        <label for="shadowTextOffset-y">Shadow Offset Y</label>
+
+                        <div id="shadowTextOffset-y" class="slider--adv slider--green"></div>
+                    </div>
+                    <div class="form-item">
+                        <label for="shadowText-blur">Shadow Blur</label>
+
+                        <div id="shadowText-blur" class="slider--adv slider--green"></div>
+                    </div>
+                </div>
+
+            </div>
+
+
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="button-wrap">
+                    <button class="main-btn">Try me</button>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+<div class="tab-pane tab-pane--blue" id="profile">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="form-item">
+                    <label for="background-color">Background-color</label>
+                    <input type="text" data-attr="background-color" id="background-color"
+                           class="minicolors input-text input-text--blue"
+                           placeholder="&larr; choose color">
+                </div>
+                <div class="form-item">
+                    <label class="ask-label ask-label--text-shadow" for="background-adv">Do you want gradient?</label>
+                    <input type="checkbox" id="background-adv" class="input-checkbox input-checkbox--blue">
+                </div>
+                <div class="background-adv__block">
+                    <div class="form-item">
+                        <label for="backgroundColor-start">Color Start</label>
+                        <input disabled type="text" id="backgroundColor-start"
+                               class="minicolors input-text--adv input-text--blue"
+                               placeholder="&larr; choose color" value="#fff">
+                    </div>
+                    <div class="form-item">
+                        <label for="backgroundColor-end">Color End</label>
+
+                        <input disabled type="text" id="backgroundColor-end"
+                               class="minicolors input-text--adv input-text--blue"
+                               placeholder="&larr; choose color" value="#000">
+                    </div>
+                    <div class="form-item">
+                        <label for="backgroundColor-dest">Border-style</label>
+
+                        <select disabled name="" id="backgroundColor-dest" class="input-text--adv input-text--blue">
+                            <option value="top">to top</option>
+                            <option value="left">to left</option>
+                            <option value="bottom">to bottom</option>
+                            <option value="right">to right</option>
+                        </select>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-md-4">
+
+                <div class="form-item">
+                    <label for="border-style">Border-style</label>
+
+                    <select name="" id="border-style" data-attr="border-style" class="input-text input-text--blue">
+                        <option value="none">none</option>
+                        <option value="solid">solid</option>
+                        <option value="dotted">dotted</option>
+                        <option value="dashed">dashed</option>
+                        <option value="double">double</option>
+                        <option value="groove">groove</option>
+                        <option value="ridge">ridge</option>
+                        <option value="inset">inset</option>
+                        <option value="outset">outset</option>
+                    </select>
+                </div>
+                <div class="form-item">
+                    <label for="border-color">Border-color</label>
+                    <input type="text" id="border-color" data-attr="border-color"
+                           class="minicolors input-text input-text--blue"
+                           placeholder="&larr; choose color">
+                </div>
+
+                <div class="form-item">
+                    <label for="border-width">Border-weight</label>
+
+                    <div id="border-width" data-attr="border-width" class="slider slider--blue"></div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-item">
+                    <label for="border-radius">Border Radius</label>
+
+                    <div id="border-radius" data-attr="border-radius" class="slider slider--blue"></div>
+                </div>
+                <div class="form-item">
+                    <label class="ask-label ask-label--border-radius" for="borderRadius-adv">Do you want different
+                        radius?</label>
+                    <input type="checkbox" id="borderRadius-adv" class="input-checkbox input-checkbox--blue">
+                </div>
+                <div class="borderRadius-adv__block">
+                    <div class="form-item">
+                        <label for="borderRadius-tl">Border-color</label>
+
+                        <div id="borderRadius-tl" class="slider--adv .border-radius--adv slider--blue"></div>
+                    </div>
+                    <div class="form-item">
+                        <label for="borderRadius-tr">Border-style</label>
+
+                        <div id="borderRadius-tr" class="slider--adv .border-radius--adv slider--blue"></div>
+                    </div>
+                    <div class="form-item">
+                        <label for="borderRadius-br">Border-weight</label>
+
+                        <div id="borderRadius-br" class="slider--adv .border-radius--adv slider--blue"></div>
+                    </div>
+                    <div class="form-item">
+                        <label for="borderRadius-bl">Border-weight</label>
+
+                        <div id="borderRadius-bl" class="slider--adv .border-radius--adv slider--blue"></div>
                     </div>
 
                 </div>
             </div>
         </div>
-        <div class="tab-pane tab-pane--blue" id="profile">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-md-4">
-                        <div class="form-item">
-                            <label for="background-color">Background-color</label>
-                            <input type="text" data-attr="background-color" id="background-color" class="minicolors input-text input-text--blue"
-                                   placeholder="&larr; choose color">
-                        </div>
-                        <div class="form-item">
-                            <label class="ask-label ask-label--text-shadow" for="background-adv">Do you want gradient?</label>
-                            <input type="checkbox" id="background-adv" class="input-checkbox input-checkbox--blue">
-                        </div>
-                        <div class="background-adv__block">
-                            <div class="form-item">
-                                <label for="backgroundColor-start">Color Start</label>
-                                <input disabled type="text" id="backgroundColor-start" class="minicolors input-text--adv input-text--blue"
-                                       placeholder="&larr; choose color" value="#fff">
-                            </div>
-                            <div class="form-item">
-                                <label for="backgroundColor-end">Color End</label>
-
-                                <input disabled type="text" id="backgroundColor-end" class="minicolors input-text--adv input-text--blue"
-                                       placeholder="&larr; choose color" value="#000">
-                            </div>
-                            <div class="form-item">
-                                <label for="backgroundColor-dest">Border-style</label>
-
-                                <select disabled name="" id="backgroundColor-dest" class="input-text--adv input-text--blue">
-                                    <option value="to top">to top</option>
-                                    <option value="to left">to left</option>
-                                    <option value="to bottom">to bottom</option>
-                                    <option value="to right">to right</option>
-                                    <option value="to top left">to top left</option>
-                                    <option value="to top right">to top right</option>
-                                    <option value="to bottom left">to bottom left</option>
-                                    <option value="to bottom right">to bottom right</option>
-                                </select>
-                            </div>
-                        </div>
-
-                    </div>
-                    <div class="col-md-4">
-                        <div class="form-item">
-                            <label class="ask-label ask-label--text-shadow" for="border-adv">Do you want border?</label>
-                            <input type="checkbox" id="border-adv" class="input-checkbox input-checkbox--blue">
-                        </div>
-                        <div class="border-adv__block">
-                            <div class="form-item">
-                                <label for="border-color">Border-color</label>
-                                <input disabled type="text" id="border-color" class="minicolors input-text--adv input-text--blue"
-                                       placeholder="&larr; choose color">
-                            </div>
-                            <div class="form-item">
-                                <label for="border-style">Border-style</label>
-
-                                <select disabled name="" id="border-style" data-attr="border-style" class="input-text input-text--blue">
-                                    <option value="solid">solid</option>
-                                    <option value="dotted">dotted</option>
-                                    <option value="dashed">dashed</option>
-                                    <option value="double">double</option>
-                                    <option value="groove">groove</option>
-                                    <option value="ridge">ridge</option>
-                                    <option value="inset">inset</option>
-                                    <option value="outset">outset</option>
-                                </select>
-                            </div>
-                            <div class="form-item">
-                                <label for="border-weight">Border-weight</label>
-
-                                <div id="border-weight" class="slider--adv slider--blue"></div>
-                            </div>
-
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="form-item">
-                            <label for="border-radius">Border Radius</label>
-
-                            <div id="border-radius" data-attr="border-radius" class="slider slider--blue"></div>
-                        </div>
-                        <div class="form-item">
-                            <label class="ask-label ask-label--border-radius" for="borderRadius-adv">Do you want different radius?</label>
-                            <input type="checkbox" id="borderRadius-adv" class="input-checkbox input-checkbox--blue">
-                        </div>
-                        <div class="borderRadius-adv__block">
-                            <div class="form-item">
-                                <label for="borderRadius-tr">Border-color</label>
-                                <div id="borderRadius-tr" class="slider--adv .border-radius--adv slider--blue"></div>
-                            </div>
-                            <div class="form-item">
-                                <label for="borderRadius-tl">Border-style</label>
-                                <div id="borderRadius-tl" class="slider--adv .border-radius--adv slider--blue"></div>
-                            </div>
-                            <div class="form-item">
-                                <label for="borderRadius-br">Border-weight</label>
-                                <div id="borderRadius-br" class="slider--adv .border-radius--adv slider--blue"></div>
-                            </div>
-                            <div class="form-item">
-                                <label for="borderRadius-bl">Border-weight</label>
-                                <div id="borderRadius-bl" class="slider--adv .border-radius--adv slider--blue"></div>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="button-wrap">
-                        <button class="main-btn">Try me</button>
-                    </div>
-                </div>
-            </div></div>
-        <div class="tab-pane tab-pane--red" id="messages">...content3...</div>
-        <div class="tab-pane tab-pane--yellow" id="hover">...content4...</div>
+        <div class="row">
+            <div class="button-wrap">
+                <button class="main-btn">Try me</button>
+            </div>
+        </div>
     </div>
+</div>
+<div class="tab-pane tab-pane--red" id="messages">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-4 col-md-offset-2">
+                <div class="form-item">
+                    <label for="padding">Padding</label>
 
-    <div class="row">
-        <div class="col-md-6">
+                    <div id="padding" data-attr="padding" class="slider slider--red"></div>
+                </div>
+                <div class="form-item">
+                    <label class="ask-label ask-label--border-radius" for="padding-adv">Do you want different
+                        padding?</label>
+                    <input type="checkbox" id="padding-adv" class="input-checkbox input-checkbox--red">
+                </div>
+                <div class="padding-adv__block">
+                    <div class="form-item">
+                        <label for="padding-top">Padding-top</label>
+
+                        <div id="padding-top" class="slider--adv .border-radius--adv slider--red"></div>
+                    </div>
+                    <div class="form-item">
+                        <label for="padding-left">Padding-left</label>
+
+                        <div id="padding-left" class="slider--adv .border-radius--adv slider--red"></div>
+                    </div>
+                    <div class="form-item">
+                        <label for="padding-bottom">Padding-bottom</label>
+
+                        <div id="padding-bottom" class="slider--adv .border-radius--adv slider--red"></div>
+                    </div>
+                    <div class="form-item">
+                        <label for="padding-right">Padding-right</label>
+
+                        <div id="padding-right" class="slider--adv .border-radius--adv slider--red"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-item">
+                    <label class="ask-label ask-label--text-shadow" for="boxShadow-adv">Do you want
+                        box-shadow?</label>
+                    <input type="checkbox" id="boxShadow-adv" class="input-checkbox input-checkbox--red">
+                </div>
+                <div class="textShadow-adv__block">
+                    <div class="form-item">
+                        <label for="boxShadow-color">Shadow Color</label>
+                        <input disabled type="text" id="boxShadow-color"
+                               class="minicolors input-text--adv input-text--red"
+                               placeholder="&larr; choose color">
+                    </div>
+                    <div class="form-item">
+                        <label for="boxShadowOffset-x">Shadow Offset X</label>
+
+                        <div id="boxShadowOffset-x" class="slider--adv slider--red"></div>
+                    </div>
+                    <div class="form-item">
+                        <label for="boxShadowOffset-y">Shadow Offset Y</label>
+
+                        <div id="boxShadowOffset-y" class="slider--adv slider--red"></div>
+                    </div>
+                    <div class="form-item">
+                        <label for="boxShadow-blur">Shadow Blur</label>
+
+                        <div id="boxShadow-blur" class="slider--adv slider--red"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="button-wrap">
+                <button class="main-btn">Try me</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="tab-pane tab-pane--yellow" id="hover">...content4...</div>
+</div>
+
+<div class="row">
+    <div class="col-md-6">
 
             <pre><code id="html-code" class="language-markup">
 
             </code></pre>
 
-        </div>
-        <div class="col-md-6">
-                <pre class="language-css"><code id="css-code" class="language-css"></code></pre>
-        </div>
     </div>
+    <div class="col-md-6">
+        <pre class="language-css"><code id="css-code" class="language-css"></code></pre>
+    </div>
+</div>
 </div>
 
 <script src="/js/vendor/jquery-1.11.1.js"></script>
