@@ -133,6 +133,7 @@ body {
 }
 .button-wrap button {
   padding: 10px;
+  border-width: 0;
   color: #000;
   font-size: 16px;
 }
