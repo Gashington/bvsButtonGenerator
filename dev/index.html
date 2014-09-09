@@ -184,51 +184,43 @@
                                 <label for="backgroundColor-dest">Border-style</label>
 
                                 <select disabled name="" id="backgroundColor-dest" class="input-text--adv input-text--blue">
-                                    <option value="to top">to top</option>
-                                    <option value="to left">to left</option>
-                                    <option value="to bottom">to bottom</option>
-                                    <option value="to right">to right</option>
-                                    <option value="to top left">to top left</option>
-                                    <option value="to top right">to top right</option>
-                                    <option value="to bottom left">to bottom left</option>
-                                    <option value="to bottom right">to bottom right</option>
+                                    <option value="top">to top</option>
+                                    <option value="left">to left</option>
+                                    <option value="bottom">to bottom</option>
+                                    <option value="right">to right</option>
                                 </select>
                             </div>
                         </div>
 
                     </div>
                     <div class="col-md-4">
+
                         <div class="form-item">
-                            <label class="ask-label ask-label--text-shadow" for="border-adv">Do you want border?</label>
-                            <input type="checkbox" id="border-adv" class="input-checkbox input-checkbox--blue">
+                            <label for="border-style">Border-style</label>
+
+                            <select name="" id="border-style" data-attr="border-style" class="input-text input-text--blue">
+                                <option value="none">none</option>
+                                <option value="solid">solid</option>
+                                <option value="dotted">dotted</option>
+                                <option value="dashed">dashed</option>
+                                <option value="double">double</option>
+                                <option value="groove">groove</option>
+                                <option value="ridge">ridge</option>
+                                <option value="inset">inset</option>
+                                <option value="outset">outset</option>
+                            </select>
                         </div>
-                        <div class="border-adv__block">
                             <div class="form-item">
                                 <label for="border-color">Border-color</label>
-                                <input disabled type="text" id="border-color" class="minicolors input-text--adv input-text--blue"
+                                <input type="text" id="border-color" data-attr="border-color" class="minicolors input-text input-text--blue"
                                        placeholder="&larr; choose color">
                             </div>
+
                             <div class="form-item">
-                                <label for="border-style">Border-style</label>
+                                <label for="border-width">Border-weight</label>
 
-                                <select disabled name="" id="border-style" data-attr="border-style" class="input-text input-text--blue">
-                                    <option value="solid">solid</option>
-                                    <option value="dotted">dotted</option>
-                                    <option value="dashed">dashed</option>
-                                    <option value="double">double</option>
-                                    <option value="groove">groove</option>
-                                    <option value="ridge">ridge</option>
-                                    <option value="inset">inset</option>
-                                    <option value="outset">outset</option>
-                                </select>
+                                <div id="border-width" data-attr="border-width" class="slider slider--blue"></div>
                             </div>
-                            <div class="form-item">
-                                <label for="border-weight">Border-weight</label>
-
-                                <div id="border-weight" class="slider--adv slider--blue"></div>
-                            </div>
-
-                        </div>
                     </div>
                     <div class="col-md-4">
                         <div class="form-item">
@@ -242,12 +234,12 @@
                         </div>
                         <div class="borderRadius-adv__block">
                             <div class="form-item">
-                                <label for="borderRadius-tr">Border-color</label>
-                                <div id="borderRadius-tr" class="slider--adv .border-radius--adv slider--blue"></div>
+                                <label for="borderRadius-tl">Border-color</label>
+                                <div id="borderRadius-tl"  class="slider--adv .border-radius--adv slider--blue"></div>
                             </div>
                             <div class="form-item">
-                                <label for="borderRadius-tl">Border-style</label>
-                                <div id="borderRadius-tl" class="slider--adv .border-radius--adv slider--blue"></div>
+                                <label for="borderRadius-tr">Border-style</label>
+                                <div id="borderRadius-tr"  class="slider--adv .border-radius--adv slider--blue"></div>
                             </div>
                             <div class="form-item">
                                 <label for="borderRadius-br">Border-weight</label>
