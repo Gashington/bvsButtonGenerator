@@ -20,31 +20,32 @@
     <link rel="stylesheet" href="css/vendor/bootstrap.css">
     <link rel="stylesheet" href="css/vendor/jquery.minicolors.css">
     <link rel="stylesheet" href="css/vendor/light-prism.css">
+    <link rel="stylesheet" href="css/vendor/jquery.formstyler.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/widgets.css">
     <link href='http://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
     <script src="/js/vendor/modernizr-2.8.3.min.js"></script>
 </head>
 <body>
-<!--[if lt IE 8]>
+<!--[if lt IE 9]>
 <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
     your browser</a> to improve your experience.</p>
 <![endif]-->
 
 <div class="container-fluid">
 <ul class="nav nav-tabs responsive" id="myTab">
-    <li class="active nav-tabs__item nav-tabs__item--item0"><a href="#home">Font</a></li>
-    <li class="nav-tabs__item nav-tabs__item--item1"><a href="#profile">Border/Background</a></li>
-    <li class="nav-tabs__item nav-tabs__item--item2"><a href="#messages">Box</a></li>
+    <li class="active nav-tabs__item nav-tabs__item--item0"><a href="#font">Font</a></li>
+    <li class="nav-tabs__item nav-tabs__item--item1"><a href="#background">Border/Background</a></li>
+    <li class="nav-tabs__item nav-tabs__item--item2"><a href="#box">Box</a></li>
     <li class="nav-tabs__item nav-tabs__item--item3"><a href="#hover">:Hover</a></li>
 </ul>
 
 <div class="tab-content  responsive">
 
-<div class="tab-pane tab-pane--green active" id="home">
+<div class="tab-pane tab-pane--green active" id="font">
     <div class="container-fluid">
         <div class="row">
-            <div class="col-md-4">
+            <div class="col-md-4 col-sm-6">
                 <div class="form-item">
                     <label for="btn-class">Button .class</label>
                     <input id="btn-class" data-attr="btn-class" class="input-text input-text--green">
@@ -82,7 +83,7 @@
                     <div id="font-size" data-attr="font-size" class="slider slider--green"></div>
                 </div>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-4 col-sm-6">
                 <div class="form-item">
                     <label for="text-transform">Text Transform</label>
                     <select name="" id="text-transform" data-attr="text-transform" class="input-text input-text--green">
@@ -111,7 +112,7 @@
                     </select>
                 </div>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-4 col-sm-6 col-sm-offset-3 col-md-offset-0">
 
                 <div class="form-item">
                     <label class="ask-label ask-label--text-shadow" for="textShadow-adv">Do you want
@@ -149,7 +150,7 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="button-wrap">
-                    <button class="main-btn">Try me</button>
+                    <button class="main-btn"></button>
                 </div>
 
             </div>
@@ -157,10 +158,10 @@
         </div>
     </div>
 </div>
-<div class="tab-pane tab-pane--blue" id="profile">
+<div class="tab-pane tab-pane--blue" id="background">
     <div class="container-fluid">
         <div class="row">
-            <div class="col-md-4">
+            <div class="col-md-4 col-sm-6">
                 <div class="form-item">
                     <label for="background-color">Background-color</label>
                     <input type="text" data-attr="background-color" id="background-color"
@@ -196,9 +197,8 @@
                         </select>
                     </div>
                 </div>
-
             </div>
-            <div class="col-md-4">
+            <div class="col-md-4 col-sm-6">
 
                 <div class="form-item">
                     <label for="border-style">Border-style</label>
@@ -228,7 +228,7 @@
                     <div id="border-width" data-attr="border-width" class="slider slider--blue"></div>
                 </div>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-4 col-sm-6 col-sm-offset-3 col-md-offset-0">
                 <div class="form-item">
                     <label for="border-radius">Border Radius</label>
 
@@ -271,10 +271,10 @@
         </div>
     </div>
 </div>
-<div class="tab-pane tab-pane--red" id="messages">
+<div class="tab-pane tab-pane--red" id="box">
     <div class="container-fluid">
         <div class="row">
-            <div class="col-md-4 col-md-offset-2">
+            <div class="col-md-4 col-md-offset-2 col-sm-6">
                 <div class="form-item">
                     <label for="padding">Padding</label>
 
@@ -308,13 +308,13 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-4 col-sm-6">
                 <div class="form-item">
                     <label class="ask-label ask-label--text-shadow" for="boxShadow-adv">Do you want
                         box-shadow?</label>
                     <input type="checkbox" id="boxShadow-adv" class="input-checkbox input-checkbox--red">
                 </div>
-                <div class="textShadow-adv__block">
+                <div class="boxShadow-adv__block">
                     <div class="form-item">
                         <label for="boxShadow-color">Shadow Color</label>
                         <input disabled type="text" id="boxShadow-color"
@@ -341,24 +341,31 @@
         </div>
         <div class="row">
             <div class="button-wrap">
-                <button class="main-btn">Try me</button>
+                <button class="main-btn"></button>
             </div>
         </div>
     </div>
 </div>
-<div class="tab-pane tab-pane--yellow" id="hover">...content4...</div>
+<div class="tab-pane tab-pane--yellow" id="hover">Coming soon</div>
 </div>
 
 <div class="row">
     <div class="col-md-6">
 
             <pre><code id="html-code" class="language-markup">
-
             </code></pre>
 
     </div>
     <div class="col-md-6">
         <pre class="language-css"><code id="css-code" class="language-css"></code></pre>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-2 col-md-offset-5">
+        <form action="" method="post">
+            <div><input type="text"/></div>
+            <div><input type="submit"/></div>
+        </form>
     </div>
 </div>
 </div>
@@ -370,6 +377,7 @@
 <script src="/js/vendor/bootstrap.js"></script>
 <script src="/js/vendor/responsive-tabs.js"></script>
 <script src="/js/vendor/jquery.minicolors.js"></script>
+<script src="/js/vendor/jquery.formstyler.js"></script>
 <script src="/js/plugins.js"></script>
 <script src="/js/main.js"></script>
 

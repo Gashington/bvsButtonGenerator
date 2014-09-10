@@ -25,6 +25,9 @@ $(function(){
             theme: 'default'
         }
     };
+
+    $('select, input[type=checkbox]').styler();
+
     $('input.minicolors').minicolors();
 
 //    $( ".slider" ).slider({

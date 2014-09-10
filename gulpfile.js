@@ -30,7 +30,7 @@ gulp.task('dev-server', function(){
 
 // Включаем наблюдателей в рабочей директории
 gulp.task('watch', function () {
-    gulp.watch(['./dev/**/*.*','!./dev/stylus/**/*.*'], ['reload']); // наблюдение за файлами всеми файлами исключая *.styl
+    gulp.watch(['./dev/**/*.*', './dev/**/**/*.*', '!./dev/stylus/**/*.*'], ['reload']); // наблюдение за файлами всеми файлами исключая *.styl
     gulp.watch(['./dev/stylus/**/*.styl'], ['stylus']); // наблюдение за файлами  *.styl
     gulp.watch(['./dev/img/sprite/*.*'], ['sprite'])
 });
