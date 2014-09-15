@@ -79,7 +79,16 @@ gulp.task('build', function () {
 });
     // сборка js
     gulp.task('build-js', function() {
-        gulp.src(['./dev/js/vendor/*jquery-1.11.1.js', './dev/js/plugins.js', './dev/js/main.js'])
+        gulp.src([
+                './dev/js/vendor/jquery-ui.js',
+                './dev/js/vendor/prism.js',
+                './dev/js/vendor/TweenMax.js',
+                './dev/js/vendor/bootstrap.js',
+                './dev/js/vendor/responsive-tabs.js',
+                './dev/js/vendor/jquery.formstyler.js',
+                './dev/js/plugins.js',
+                './dev/js/main.js'
+            ])
             .pipe(concat('build.min.js'))
             .pipe(uglify())
             .pipe(gulp.dest('app/js'));
@@ -87,7 +96,15 @@ gulp.task('build', function () {
 
     // сборка css
     gulp.task('build-css', function() {
-        gulp.src(['./dev/css/vendor/normalize.css', './dev/css/main.css', './dev/css/widgets.css'])
+        gulp.src([
+                './dev/css/vendor/normalize.css',
+                './dev/css/vendor/bootstrap.css',
+                './dev/css/vendor/jquery.minicolors.css',
+                './dev/css/vendor/light-prism.css',
+                './dev/css/vendor/jquery.formstyler.css',
+                './dev/css/main.css',
+                './dev/css/widgets.css'
+            ])
             .pipe(concat('build.min.css'))
             .pipe(minifyCSS())
             .pipe(gulp.dest('app/css'));

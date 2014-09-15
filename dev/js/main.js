@@ -263,7 +263,7 @@ $(function () {
         },
 
         set_backgroundGradient: function () {
-                data = {
+                var data = {
                     dest: app.var.$backgroundColor_dest.val(),
                     colorStart: app.var.$backgroundColor_start.val(),
                     colorEnd: app.var.$backgroundColor_end.val(),
