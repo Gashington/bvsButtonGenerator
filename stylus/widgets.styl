@@ -1,32 +1,38 @@
 /*Фон слайдера*/
 .slider
+.slider--adv
   position relative
   display inline-block
-  width 150px
+  width 165px
   height 20px
-  margin 0
+  margin 0 10px 0 0
   padding 0 10px
   background #b9bdc4
-  &.green
+  &.slider--green
     .ui-slider-handle
-      background-position 0 0
+      background-position 0 -36px
     .ui-widget-header
-      background #659c82
-  &.blue
+      background #5b8873
+  &.slider--blue
     .ui-slider-handle
       background-position 0 -72px
     .ui-widget-header
-      background #80afd7
-  &.red
+      background #6a98b7
+  &.slider--red
     .ui-slider-handle
-      background-position 0 -48px
+      background-position 0 -108px
     .ui-widget-header
-      background #db7d7b
-  &.yellow
+      background #c15d55
+  &.slider--yellow
     .ui-slider-handle
-      background-position 0 -24px
+      background-position 0 -144px
     .ui-widget-header
-      background #ecca6c
+      background #dcb055
+  &.ui-slider-disabled
+    .ui-slider-handle
+      background-position 0 0px
+    .ui-widget-header
+      background #b9bdc4
 
 .ui-slider-handle
   width 36px
@@ -34,8 +40,7 @@
   position absolute
   top -7px
   margin-left -12px
-  z-index 200
-  background orange no-repeat
+  background url("../img/handle-bg.png") no-repeat
   color #ffffff
   outline none
   text-align center

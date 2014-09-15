@@ -1,71 +1,388 @@
-<!doctype html>
-<html>
-  <head>
+<!DOCTYPE html>
+<!--[if lt IE 7]>
+<html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>
+<html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>
+<html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js"> <!--<![endif]-->
+<head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Bvsbuttongenerator by Gashington</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="favicon.ico">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-  </head>
-  <body>
-    <div class="wrapper">
-      <header>
-        <h1>Bvsbuttongenerator</h1>
-        <p>Button Generator homework</p>
+    <link rel="stylesheet" href="css/vendor/normalize.css">
+    <link rel="stylesheet" href="css/vendor/bootstrap.css">
+    <link rel="stylesheet" href="css/vendor/jquery.minicolors.css">
+    <link rel="stylesheet" href="css/vendor/light-prism.css">
+    <link rel="stylesheet" href="css/vendor/jquery.formstyler.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/widgets.css">
+    <link href='http://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
+    <script src="/js/vendor/modernizr-2.8.3.min.js"></script>
+</head>
+<body>
+<!--[if lt IE 9]>
+<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
+    your browser</a> to improve your experience.</p>
+<![endif]-->
 
-        <p class="view"><a href="https://github.com/Gashington/bvsButtonGenerator">View the Project on GitHub <small>Gashington/bvsButtonGenerator</small></a></p>
+<div class="container-fluid">
+<ul class="nav nav-tabs responsive" id="myTab">
+    <li class="active nav-tabs__item nav-tabs__item--item0"><a href="#font">Font</a></li>
+    <li class="nav-tabs__item nav-tabs__item--item1"><a href="#background">Border/Background</a></li>
+    <li class="nav-tabs__item nav-tabs__item--item2"><a href="#box">Box</a></li>
+    <li class="nav-tabs__item nav-tabs__item--item3"><a href="#hover">:Hover</a></li>
+</ul>
+
+<div class="tab-content  responsive">
+
+<div class="tab-pane tab-pane--green active" id="font">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-4 col-sm-6">
+                <div class="form-item">
+                    <label for="btn-class">Button .class</label>
+                    <input id="btn-class" data-attr="btn-class" class="input-text input-text--green">
+                </div>
+                <div class="form-item">
+                    <label for="text">Button text</label>
+                    <input type="text" data-attr="btn-text" id="text" class="input-text input-text--green">
+                </div>
+                <div class="form-item">
+                    <label for="font-family">Font-family</label>
+                    <select name="" id="font-family" data-attr="font-family" class="input-text input-text--green">
+                        <option value="Arial">Arial</option>
+                        <option value="Arial Black">Arial Black</option>
+                        <option value="Comic Sans MS">Comic Sans MS</option>
+                        <option value="Impact">Impact</option>
+                        <option value="Lucida Sans Unicode">Lucida Sans Unicode</option>
+                        <option value="Tahoma">Tahoma</option>
+                        <option value="Trebuchet MS">Trebuchet MS</option>
+                        <option value="Verdana">Verdana</option>
+                        <option value="Georgia">Georgia</option>
+                        <option value="Palatino Linotype">Palatino Linotype</option>
+                        <option value="Times New Roman">Times New Roman</option>
+                        <option value="Courier New">Courier New</option>
+                        <option value="Lucida Console">Lucida Console</option>
+                    </select>
+                </div>
+                <div class="form-item">
+                    <label for="font-color">Font color</label>
+                    <input type="text" data-attr="color" id="font-color" class="minicolors input-text input-text--green"
+                           placeholder="&larr; choose color">
+                </div>
+                <div class="form-item">
+                    <label for="font-size">Font-size</label>
+
+                    <div id="font-size" data-attr="font-size" class="slider slider--green"></div>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6">
+                <div class="form-item">
+                    <label for="text-transform">Text Transform</label>
+                    <select name="" id="text-transform" data-attr="text-transform" class="input-text input-text--green">
+                        <option value="none">none</option>
+                        <option value="capitalize">capitalize</option>
+                        <option value="lowercase">lowercase</option>
+                        <option value="uppercase">uppercase</option>
+
+                    </select>
+                </div>
+                <div class="form-item">
+                    <label for="font-style">Font Style</label>
+                    <select name="" id="font-style" data-attr="font-style" class="input-text input-text--green">
+                        <option value="normal">normal</option>
+                        <option value="italic">italic</option>
+                        <option value="oblique">oblique</option>
+                    </select>
+                </div>
+                <div class="form-item">
+                    <label for="font-weight">Font Weight</label>
+                    <select name="" id="font-weight" data-attr="font-weight" class="input-text input-text--green">
+                        <option value="normal">normal</option>
+                        <option value="bold">bold</option>
+                        <option value="bolder">bolder</option>
+                        <option value="lighter">lighter</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6 col-sm-offset-3 col-md-offset-0">
+
+                <div class="form-item">
+                    <label class="ask-label ask-label--text-shadow" for="textShadow-adv">Do you want
+                        text-shadow?</label>
+                    <input type="checkbox" id="textShadow-adv" class="input-checkbox input-checkbox--green">
+                </div>
+                <div class="textShadow-adv__block">
+                    <div class="form-item">
+                        <label for="shadowText-color">Shadow Color</label>
+                        <input disabled type="text" id="shadowText-color"
+                               class="minicolors input-text--adv input-text--green"
+                               placeholder="&larr; choose color">
+                    </div>
+                    <div class="form-item">
+                        <label for="shadowTextOffset-x">Shadow Offset X</label>
+
+                        <div id="shadowTextOffset-x" class="slider--adv slider--green"></div>
+                    </div>
+                    <div class="form-item">
+                        <label for="shadowTextOffset-y">Shadow Offset Y</label>
+
+                        <div id="shadowTextOffset-y" class="slider--adv slider--green"></div>
+                    </div>
+                    <div class="form-item">
+                        <label for="shadowText-blur">Shadow Blur</label>
+
+                        <div id="shadowText-blur" class="slider--adv slider--green"></div>
+                    </div>
+                </div>
+
+            </div>
 
 
-        <ul>
-          <li><a href="https://github.com/Gashington/bvsButtonGenerator/zipball/master">Download <strong>ZIP File</strong></a></li>
-          <li><a href="https://github.com/Gashington/bvsButtonGenerator/tarball/master">Download <strong>TAR Ball</strong></a></li>
-          <li><a href="https://github.com/Gashington/bvsButtonGenerator">View On <strong>GitHub</strong></a></li>
-        </ul>
-      </header>
-      <section>
-        <h3>
-<a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages"><span class="octicon octicon-link"></span></a>Welcome to GitHub Pages.</h3>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="button-wrap">
+                    <button class="main-btn"></button>
+                </div>
 
-<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
+            </div>
 
-<pre><code>$ cd your_repo_root/repo_name
-$ git fetch origin
-$ git checkout gh-pages
-</code></pre>
-
-<p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
-
-<h3>
-<a name="designer-templates" class="anchor" href="#designer-templates"><span class="octicon octicon-link"></span></a>Designer Templates</h3>
-
-<p>We've crafted some handsome templates for you to use. Go ahead and continue to layouts to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved if it remained markdown format.</p>
-
-<h3>
-<a name="rather-drive-stick" class="anchor" href="#rather-drive-stick"><span class="octicon octicon-link"></span></a>Rather Drive Stick?</h3>
-
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
-
-<h3>
-<a name="authors-and-contributors" class="anchor" href="#authors-and-contributors"><span class="octicon octicon-link"></span></a>Authors and Contributors</h3>
-
-<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
-
-<h3>
-<a name="support-or-contact" class="anchor" href="#support-or-contact"><span class="octicon octicon-link"></span></a>Support or Contact</h3>
-
-<p>Having trouble with Pages? Check out the documentation at <a href="http://help.github.com/pages">http://help.github.com/pages</a> or contact <a href="mailto:support@github.com">support@github.com</a> and we’ll help you sort it out.</p>
-      </section>
-      <footer>
-        <p>This project is maintained by <a href="https://github.com/Gashington">Gashington</a></p>
-        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
-      </footer>
+        </div>
     </div>
-    <script src="javascripts/scale.fix.js"></script>
-    
-  </body>
+</div>
+<div class="tab-pane tab-pane--blue" id="background">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-4 col-sm-6">
+                <div class="form-item">
+                    <label for="background-color">Background-color</label>
+                    <input type="text" data-attr="background-color" id="background-color"
+                           class="minicolors input-text input-text--blue"
+                           placeholder="&larr; choose color">
+                </div>
+                <div class="form-item">
+                    <label class="ask-label ask-label--text-shadow" for="background-adv">Do you want gradient?</label>
+                    <input type="checkbox" id="background-adv" class="input-checkbox input-checkbox--blue">
+                </div>
+                <div class="background-adv__block">
+                    <div class="form-item">
+                        <label for="backgroundColor-start">Color Start</label>
+                        <input disabled type="text" id="backgroundColor-start"
+                               class="minicolors input-text--adv input-text--blue"
+                               placeholder="&larr; choose color" value="#fff">
+                    </div>
+                    <div class="form-item">
+                        <label for="backgroundColor-end">Color End</label>
+
+                        <input disabled type="text" id="backgroundColor-end"
+                               class="minicolors input-text--adv input-text--blue"
+                               placeholder="&larr; choose color" value="#000">
+                    </div>
+                    <div class="form-item">
+                        <label for="backgroundColor-dest">Border-style</label>
+
+                        <select disabled name="" id="backgroundColor-dest" class="input-text--adv input-text--blue">
+                            <option value="top">to top</option>
+                            <option value="left">to left</option>
+                            <option value="bottom">to bottom</option>
+                            <option value="right">to right</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6">
+
+                <div class="form-item">
+                    <label for="border-style">Border-style</label>
+
+                    <select name="" id="border-style" data-attr="border-style" class="input-text input-text--blue">
+                        <option value="none">none</option>
+                        <option value="solid">solid</option>
+                        <option value="dotted">dotted</option>
+                        <option value="dashed">dashed</option>
+                        <option value="double">double</option>
+                        <option value="groove">groove</option>
+                        <option value="ridge">ridge</option>
+                        <option value="inset">inset</option>
+                        <option value="outset">outset</option>
+                    </select>
+                </div>
+                <div class="form-item">
+                    <label for="border-color">Border-color</label>
+                    <input type="text" id="border-color" data-attr="border-color"
+                           class="minicolors input-text input-text--blue"
+                           placeholder="&larr; choose color">
+                </div>
+
+                <div class="form-item">
+                    <label for="border-width">Border-weight</label>
+
+                    <div id="border-width" data-attr="border-width" class="slider slider--blue"></div>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6 col-sm-offset-3 col-md-offset-0">
+                <div class="form-item">
+                    <label for="border-radius">Border Radius</label>
+
+                    <div id="border-radius" data-attr="border-radius" class="slider slider--blue"></div>
+                </div>
+                <div class="form-item">
+                    <label class="ask-label ask-label--border-radius" for="borderRadius-adv">Do you want different
+                        radius?</label>
+                    <input type="checkbox" id="borderRadius-adv" class="input-checkbox input-checkbox--blue">
+                </div>
+                <div class="borderRadius-adv__block">
+                    <div class="form-item">
+                        <label for="borderRadius-tl">Border-color</label>
+
+                        <div id="borderRadius-tl" class="slider--adv .border-radius--adv slider--blue"></div>
+                    </div>
+                    <div class="form-item">
+                        <label for="borderRadius-tr">Border-style</label>
+
+                        <div id="borderRadius-tr" class="slider--adv .border-radius--adv slider--blue"></div>
+                    </div>
+                    <div class="form-item">
+                        <label for="borderRadius-br">Border-weight</label>
+
+                        <div id="borderRadius-br" class="slider--adv .border-radius--adv slider--blue"></div>
+                    </div>
+                    <div class="form-item">
+                        <label for="borderRadius-bl">Border-weight</label>
+
+                        <div id="borderRadius-bl" class="slider--adv .border-radius--adv slider--blue"></div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="button-wrap">
+                <button class="main-btn">Try me</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="tab-pane tab-pane--red" id="box">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-4 col-md-offset-2 col-sm-6">
+                <div class="form-item">
+                    <label for="padding">Padding</label>
+
+                    <div id="padding" data-attr="padding" class="slider slider--red"></div>
+                </div>
+                <div class="form-item">
+                    <label class="ask-label ask-label--border-radius" for="padding-adv">Do you want different
+                        padding?</label>
+                    <input type="checkbox" id="padding-adv" class="input-checkbox input-checkbox--red">
+                </div>
+                <div class="padding-adv__block">
+                    <div class="form-item">
+                        <label for="padding-top">Padding-top</label>
+
+                        <div id="padding-top" class="slider--adv .border-radius--adv slider--red"></div>
+                    </div>
+                    <div class="form-item">
+                        <label for="padding-left">Padding-left</label>
+
+                        <div id="padding-left" class="slider--adv .border-radius--adv slider--red"></div>
+                    </div>
+                    <div class="form-item">
+                        <label for="padding-bottom">Padding-bottom</label>
+
+                        <div id="padding-bottom" class="slider--adv .border-radius--adv slider--red"></div>
+                    </div>
+                    <div class="form-item">
+                        <label for="padding-right">Padding-right</label>
+
+                        <div id="padding-right" class="slider--adv .border-radius--adv slider--red"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6">
+                <div class="form-item">
+                    <label class="ask-label ask-label--text-shadow" for="boxShadow-adv">Do you want
+                        box-shadow?</label>
+                    <input type="checkbox" id="boxShadow-adv" class="input-checkbox input-checkbox--red">
+                </div>
+                <div class="boxShadow-adv__block">
+                    <div class="form-item">
+                        <label for="boxShadow-color">Shadow Color</label>
+                        <input disabled type="text" id="boxShadow-color"
+                               class="minicolors input-text--adv input-text--red"
+                               placeholder="&larr; choose color">
+                    </div>
+                    <div class="form-item">
+                        <label for="boxShadowOffset-x">Shadow Offset X</label>
+
+                        <div id="boxShadowOffset-x" class="slider--adv slider--red"></div>
+                    </div>
+                    <div class="form-item">
+                        <label for="boxShadowOffset-y">Shadow Offset Y</label>
+
+                        <div id="boxShadowOffset-y" class="slider--adv slider--red"></div>
+                    </div>
+                    <div class="form-item">
+                        <label for="boxShadow-blur">Shadow Blur</label>
+
+                        <div id="boxShadow-blur" class="slider--adv slider--red"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="button-wrap">
+                <button class="main-btn"></button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="tab-pane tab-pane--yellow" id="hover">Coming soon</div>
+</div>
+
+<div class="row">
+    <div class="col-md-6">
+
+            <pre><code id="html-code" class="language-markup">
+            </code></pre>
+
+    </div>
+    <div class="col-md-6">
+        <pre class="language-css"><code id="css-code" class="language-css"></code></pre>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-4 col-md-offset-4">
+        <form class="code-form" action="" method="post">
+            <div class="code-form__item"><input class="code-form__email" type="email" placeholder="you email"/></div>
+            <div class="code-form__item"><input class="code-form__submit" type="submit" value="send code"/></div>
+        </form>
+    </div>
+</div>
+</div>
+
+<script src="/js/vendor/jquery-1.11.1.js"></script>
+<script src="/js/vendor/jquery-ui.js"></script>
+<script src="/js/vendor/prism.js"></script>
+<script src="/js/vendor/TweenMax.js"></script>
+<script src="/js/vendor/bootstrap.js"></script>
+<script src="/js/vendor/responsive-tabs.js"></script>
+<script src="/js/vendor/jquery.minicolors.js"></script>
+<script src="/js/vendor/jquery.formstyler.js"></script>
+<script src="/js/plugins.js"></script>
+<script src="/js/main.js"></script>
+
+<!--Удалить в production версии-->
+<script src="//localhost:35729/livereload.js"></script>
+
+</body>
 </html>
