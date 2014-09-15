@@ -31,7 +31,7 @@
 <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
     your browser</a> to improve your experience.</p>
 <![endif]-->
-
+<h1 class="site-title">CSS3 button generator</h1>
 <div class="container-fluid">
 <ul class="nav nav-tabs responsive" id="myTab">
     <li class="active nav-tabs__item nav-tabs__item--item0"><a href="#font">Font</a></li>
@@ -187,7 +187,7 @@
                                placeholder="&larr; choose color" value="#000">
                     </div>
                     <div class="form-item">
-                        <label for="backgroundColor-dest">Border-style</label>
+                        <label for="backgroundColor-dest">Destination</label>
 
                         <select disabled name="" id="backgroundColor-dest" class="input-text--adv input-text--blue">
                             <option value="top">to top</option>
@@ -241,22 +241,22 @@
                 </div>
                 <div class="borderRadius-adv__block">
                     <div class="form-item">
-                        <label for="borderRadius-tl">Border-color</label>
+                        <label for="borderRadius-tl">TopLeft</label>
 
                         <div id="borderRadius-tl" class="slider--adv .border-radius--adv slider--blue"></div>
                     </div>
                     <div class="form-item">
-                        <label for="borderRadius-tr">Border-style</label>
+                        <label for="borderRadius-tr">TopRight</label>
 
                         <div id="borderRadius-tr" class="slider--adv .border-radius--adv slider--blue"></div>
                     </div>
                     <div class="form-item">
-                        <label for="borderRadius-br">Border-weight</label>
+                        <label for="borderRadius-br">BottomRight</label>
 
                         <div id="borderRadius-br" class="slider--adv .border-radius--adv slider--blue"></div>
                     </div>
                     <div class="form-item">
-                        <label for="borderRadius-bl">Border-weight</label>
+                        <label for="borderRadius-bl">BottomLeft</label>
 
                         <div id="borderRadius-bl" class="slider--adv .border-radius--adv slider--blue"></div>
                     </div>
@@ -381,6 +381,8 @@
 <script src="js/plugins.js"></script>
 <script src="js/main.js"></script>
 
+<!--Удалить в production версии-->
+<script src="//localhost:35729/livereload.js"></script>
 
 </body>
 </html>
