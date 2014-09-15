@@ -52,7 +52,9 @@ body {
   color: #fff;
 }
 .nav-tabs .nav-tabs__item.active a:hover,
-.nav-tabs .nav-tabs__item:hover a:hover {
+.nav-tabs .nav-tabs__item:hover a:hover,
+.nav-tabs .nav-tabs__item.active a:focus,
+.nav-tabs .nav-tabs__item:hover a:focus {
   background: none;
   border: none;
   color: #fff;
