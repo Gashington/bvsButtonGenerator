@@ -409,9 +409,9 @@ $(function () {
             };
             if (data['border-radius'] !== '0px') {
                 console.log(data['-webkit-border-radius']);
-                str += "\t" + '-webkit-border-radius: ' + data['-webkit-border-radius'] + ";\n";
-                str += "\t" + '-moz-border-radius: ' + data['-moz-border-radius'] + ";\n";
-                str += "\t" + '-khtml-border-radius: ' + data['-khtml-border-radius'] + ";\n";
+                str += "\t" + '-webkit-border-radius: ' + data['border-radius'] + ";\n";
+                str += "\t" + '-moz-border-radius: ' + data['border-radius'] + ";\n";
+                str += "\t" + '-khtml-border-radius: ' + data['border-radius'] + ";\n";
                 str += "\t" + 'border-radius: ' + data['border-radius'] + "px;\n";
             };
             if (data['background-color'] !== 'inherit') {
