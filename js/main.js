@@ -344,14 +344,18 @@ $(function () {
         switch_background_adv: function (e) {
             if ($(this).prop('checked')) {
                 app.var.$background_color.prop('disabled', true)
-                $(".input-text--adv", app.var.$background_adv__block).prop('disabled', false).trigger('change');
-                //$(".slider--adv", app.var.$background_adv__block).slider('enable');
+                $(".input-text--adv", app.var.$background_adv__block).prop('disabled', false);
+                setTimeout(function() {
+                    $(".input-text--adv", app.var.$background_adv__block).trigger('refresh');
+                }, 1)
                 app.set_backgroundGradient();
             }
             else {
                 app.var.$background_color.prop('disabled', false).trigger('change')
                 $(".input-text--adv", app.var.$background_adv__block).prop('disabled', true);
-                //$(".slider--adv", app.var.$background_adv__block).slider('disable');
+                setTimeout(function() {
+                    $(".input-text--adv", app.var.$background_adv__block).trigger('refresh');
+                }, 1)
                 app.var.cur_data['background-image'] = 'none'
                 app.var.$btn.css(app.var.cur_data);
                 app.get_css();
@@ -421,8 +425,8 @@ $(function () {
                 str += "\t" + 'background-image: -webkit-' + data['background-image'] + ";\n";
                 str += "\t" + 'background-image: -moz-' + data['background-image'] + ";\n";
                 str += "\t" + 'background-image: -o-' + data['background-image'] + ";\n";
-                str += "\t" + 'background-image: -ms-' + data['background-image'] + ";\n";
-                str += "\t" + 'background-image: ' + data['background-image'] + ";\n";
+                str += "\t" + 'background-image: -ms-' + data['background-image'] + ";/*not support ie8-9*/\n";
+                str += "\t" + 'background-image: ' + data['background-image'] + ";/*not support ie8-9*/\n";
             }
             str += "\t" + 'color: ' + data['color'] + ";\n";
             if (data['font-style'] !== 'normal') {
