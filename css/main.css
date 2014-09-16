@@ -172,6 +172,13 @@ body {
 .input-checkbox--red .jq-selectbox__trigger {
   background: #c15d55;
 }
+.input-text--adv.disabled {
+  border: 1px solid #b9bdc4;
+}
+.input-text--adv.disabled .jq-selectbox__trigger {
+  height: 100%;
+  background: #b9bdc4;
+}
 .button-wrap {
   padding: 30px 0;
   text-align: center;
@@ -205,4 +212,7 @@ body {
   width: 150px;
   font-size: 20px;
   border-radius: 5px;
+}
+.language-css {
+  margin: 15px 0;
 }

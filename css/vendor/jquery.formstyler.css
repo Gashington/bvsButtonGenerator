@@ -121,7 +121,7 @@
     text-align: left;
 }
 .jq-selectbox__select {
-	height: 26px;
+    height: 100%;
 	padding: 0 45px 0 10px;
 
 }
@@ -134,7 +134,7 @@
 }
 .jq-selectbox.disabled .jq-selectbox__select {
 	border-color: #CCC;
-	background: #F5F5F5;
+	background: none;
 	box-shadow: none;
 	color: #888;
 }
